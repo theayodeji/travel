@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Button({ dataType }) {
+function Button({ label, dataType, handleClick }) {
   return (
-    <div className={`btn-${dataType}`}>Button</div>
+    <button className={`btn-${dataType}`} onClick={handleClick}>{label}</button>
   )
 }
 
-export default Button
+export default Button;

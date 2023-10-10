@@ -1,0 +1,67 @@
+{
+    "Tours": [
+        {
+            "tourName": "Switzerland",
+            "location": "Europe",
+            "rating": 5,
+            "duration": 8,
+            "numberOfPeople": 25,
+            "price": 1000,
+            "isDiscounted": true,
+            "oldPrice": 1200,
+            "description": "Nam exercitationem commodi et ducimus quia in dolore animi sit mollitia amet id quod eligendi. Et labore harum non nobis ipsum eum molestias mollitia et corporis praesentium a laudantium internos."
+        },
+        {
+            "tourName": "Amazon",
+            "location": "Brazil",
+            "rating": 5,
+            "duration": 8,
+            "numberOfPeople": 30,
+            "price": 1223,
+            "isDiscounted": true,
+            "oldPrice": 1200,
+            "description": "Nam exercitationem commodi et ducimus quia in dolore animi sit mollitia amet id quod eligendi. Et labore harum non nobis ipsum eum molestias mollitia et corporis praesentium a laudantium internos."
+        },
+        {
+            "tourName": "Giza",
+            "location": "Egypt",
+            "rating": 5,
+            "duration": 8,
+            "numberOfPeople": 155,
+            "price": 1200,
+            "isDiscounted": false,
+            "description": "Nam exercitationem commodi et ducimus quia in dolore animi sit mollitia amet id quod eligendi. Et labore harum non nobis ipsum eum molestias mollitia et corporis praesentium a laudantium internos."
+        }
+    ],
+
+    "promo": {
+        "promoClass": "romantic-trips",
+        "illustration": "",
+        "promoText": {
+            "tag": "Honeymoon Specials",
+            "title": "Our Romantic Tropical Destinations",
+            "description": "Et labore harum non nobis ipsum eum molestias mollitia et corporis praesentium a laudantium internos. Non quis eius quo eligendi corrupti et fugiat nulla qui soluta recusandae in maxime quasi aut ducimus illum aut optio quibusdam!"
+        }
+    },
+
+    "testimonials":[
+        {
+            "customerName": "Christine Beckham",
+            "img": "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=400&q=60",
+            "customerProfession": "Designer",
+            "text": "Vel officiis dolor ea illo aut eligendi ullam non laudantium magnam et recusandae molestiae sit iure unde aut voluptate quaerat. Id sunt provident quo possimus impedit vel doloremque obcaecati qui ullam consectetur et ipsum omnis."
+        },
+        {
+            "customerName": "Christine Beckham",
+            "img": "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=400&q=60",
+            "customerProfession": "Designer",
+            "text": "Vel officiis dolor ea illo aut eligendi ullam non laudantium magnam et recusandae molestiae sit iure unde aut voluptate quaerat. Id sunt provident quo possimus impedit vel doloremque obcaecati qui ullam consectetur et ipsum omnis."
+        },
+        {
+            "customerName": "Christine Beckham",
+            "img": "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=400&q=60",
+            "customerProfession": "Designer",
+            "text": "Vel officiis dolor ea illo aut eligendi ullam non laudantium magnam et recusandae molestiae sit iure unde aut voluptate quaerat. Id sunt provident quo possimus impedit vel doloremque obcaecati qui ullam consectetur et ipsum omnis."
+        }
+    ]
+}
