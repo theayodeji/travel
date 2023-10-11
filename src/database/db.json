@@ -34,7 +34,8 @@
         }
     ],
 
-    "promo": {
+    "promos": {
+        "honeymoon":{
         "promoClass": "romantic-trips",
         "illustration": "",
         "promoText": {
@@ -43,6 +44,16 @@
             "description": "Et labore harum non nobis ipsum eum molestias mollitia et corporis praesentium a laudantium internos. Non quis eius quo eligendi corrupti et fugiat nulla qui soluta recusandae in maxime quasi aut ducimus illum aut optio quibusdam!"
         }
     },
+    "europeanTours":{
+        "promoClass": "europe-tours",
+        "illustration": "",
+        "promoText": {
+            "tag": null,
+            "title": "We Provide You Best Europe Sightseeing Tours",
+            "description": "Et labore harum non nobis ipsum eum molestias mollitia et corporis praesentium a laudantium internos. Non quis eius quo eligendi corrupti et fugiat nulla qui soluta recusandae in maxime quasi aut ducimus illum aut optio quibusdam!"
+        }
+    }
+},
 
     "testimonials":[
         {

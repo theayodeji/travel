@@ -1,7 +1,7 @@
 import React from 'react'
 import swirl from "../assets/swirl.png"
 import SearchBooking from './SearchBooking'
-import HeroPromo from './HeroPromo'
+// import HeroPromo from './HeroPromo'
 
 function Hero({isPromo}) {
 
@@ -11,7 +11,7 @@ function Hero({isPromo}) {
                 <img src={swirl} alt="" />
                 <h1>No matter where you're going to, we'll take you there</h1>
                 <SearchBooking />
-                <HeroPromo />
+                {/* <HeroPromo /> */}
             </div>
         )
     }else{

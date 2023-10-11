@@ -7,8 +7,8 @@ function SearchBooking() {
   return (
     <div className='search-booking'>
       <input type="text" placeholder="Where To?"/>
-      <Dropdown arrowIcon={dropdownArrow} label={"Travel Type"} />
-      <Dropdown arrowIcon={dropdownArrow} label={"Duration"} />
+      <Dropdown arrowIcon={dropdownArrow} label={"Travel Type"} dropDownItems={[]}/>
+      <Dropdown arrowIcon={dropdownArrow} label={"Duration"} dropDownItems={[]}/>
       <Button dataType={"primary"} label={"Submit"} handleClick={() => {return}} />
     </div>
   )
