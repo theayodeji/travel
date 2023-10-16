@@ -45,3 +45,745 @@ table {
 img{
     max-width: 100%;
 }
+
+a{
+	text-decoration: none;
+	color: unset;
+}
+
+nav .nav-link, nav > p{
+	font-family: 'Circular Std';
+	font-size: 17px;
+	font-weight: 500;
+}
+button{
+	padding: .8rem 1.5rem;
+	border: none;
+	background-color: #DF6951;
+	color: white;
+	border-radius: 5px;
+	cursor: pointer;
+	font-family: Hp Simplified;
+	transition: all 250ms ease-in;
+
+	&:hover{
+		background-color: #e78470;
+	}
+}
+
+button.btn-transparent{
+	background: none;
+	border: 1px solid white;
+
+	&:hover{
+		background-color: white;
+		color: #0000;
+	}
+}
+
+*{
+	box-sizing: border-box;
+}
+
+body{
+	width: 100%;
+	overflow-x: hidden;
+}
+
+//HEADER
+
+header{
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	background: url("../assets/rectangle-19290.png");
+	background-size: cover;
+	background-position: -300px 0px;
+	background-repeat: no-repeat;
+
+	*{
+		font-family: "HP Simplified Hans";
+	}
+
+	// gap: 2.5rem;
+
+	.logo{
+		width: 100px;
+	}
+
+	.burger{
+		display: flex;
+		flex-direction: column;
+		gap: 6px;
+		cursor: pointer;
+		*{
+			width: 30px;
+			height: 2px;
+			background-color: white;
+			border-radius: 5px;
+			transition : all 250ms ease-in-out ;
+		}
+
+		*:not(:nth-child(2)){
+			transition-delay: 150ms;
+		}
+
+		&.active{
+			:nth-child(1){
+				transform: rotate(45deg) translate(5px, 6px);
+			}	
+			:nth-child(3){
+				transform: rotate(-45deg) translate(5px, -6px);
+			}	
+			:nth-child(2){
+				opacity: 0;		
+			}	
+		}
+
+		
+	}
+
+	
+	.nav-wrapper{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 0 1.5rem;
+
+		.dropdown-link{
+			display: none;
+		}
+	}
+	
+	nav{
+		display: none;
+	}
+
+
+
+	.hero.hero-promo{
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 3rem 1.5rem;
+
+		 > h1{
+			font-size: 42px;
+			margin: 1rem 0;
+			margin-bottom: 2rem;
+			color: white;
+			font-weight: 700;
+		}
+
+		.search-booking{
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+			gap: 20px;
+			background-color: #ffffff83;
+			backdrop-filter: blur(10px);
+			padding: 1.5rem 1.5rem;
+			border-radius: 5px;
+			gap: 1.5rem;
+			width: 50%;
+
+			> *:not(button) {
+				color: white;
+				font-size: 15px;
+			}
+
+			input[type='text']{
+				border: none;
+				font-size: .9rem;
+				padding: 0;
+				width: 80px;
+				background: none;
+
+				&:active , &:focus, &:focus-visible{
+					border: none;
+					outline: none;
+
+				}
+
+				&:focus-visible::placeholder{
+					color: #ffffff73;
+				}
+			}
+
+			input[type='text']::placeholder{
+				color: white;
+				font-size: 15px;
+				padding: none;
+				margin: 0;
+			}
+
+			.dropdown-link{
+				cursor: pointer;
+				position: relative;
+				span img{
+					width: 10px;
+					margin-left: 10px;
+					transform: translateY(-2px);
+					transition: all 250ms ease-in-out;
+				}
+
+				.dropdown-items{
+					position: absolute;
+					background: white;
+					color: #0a0a20;
+					display: flex;
+					flex-direction: column;
+					padding: 1rem 1.5rem; 
+					gap: 1rem;
+					border-radius: 5px;
+					box-shadow: 12px 9px 30px -10px rgba(0, 0, 0, 0.411);
+					top: 20px;
+					left: -20px;
+					// opacity: 0;
+					// visibility: hidden;
+					transition: all 200ms ease-in;
+					z-index: 999;
+
+					& > *{
+						transition: color 200ms ease-in;
+					}
+					& > *:hover{
+						color: #DF6951;
+					}
+				}
+
+				& span img.opened{
+					transform: rotateX(180deg) translateY(0);
+				}
+
+			}
+
+		}
+		
+	}
+
+}
+
+
+.services{
+	display: flex;
+	flex-direction: column;
+	padding: 3rem 1.5rem;
+	align-items: center;
+	text-align: center;
+
+	> p{
+		font-size: 13px;
+		margin-bottom: 5px;
+		font-family: "HP Simplified Hans";
+		font-weight: 700;
+		color: #DF6951;
+		margin-bottom: 10px;
+	}
+
+	>h2{
+		font-size: 1.5rem;
+		margin-bottom: 1.5rem;
+		font-weight: 800;
+		color: #00002b;
+	}
+
+	.services-container{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 2rem;
+		position: relative;
+		isolation: isolate;
+
+
+		*{
+			font-family: "HP Simplified Hans";
+		}
+
+		img{
+			width: 80px;
+		}
+		
+		>*{
+			width: 70%;
+			padding: 3rem 1rem;
+			border-radius: 30px;
+			box-shadow: -6px 7px 20px -12px rgba(0, 0, 0, 0.678);
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 1em;
+			position: relative;
+			background: white;
+			
+
+			h5{
+				font-size: 1.2rem;
+				color: #0d0d55;
+			}
+
+			&::before{
+				transition: all 300ms ease-in-out ;
+				height: 70px;
+				width: 70px;
+				background: #DF6951;
+				content: '';
+				position: absolute;
+				border-radius: 20px;
+				z-index: -1;
+				opacity: 0;
+				bottom: -30px;
+				left: 30px;
+			}
+
+			&:hover::before{
+				opacity: 1;
+				bottom: -30px;
+				left: -30px;
+			}
+
+			
+		}
+	}
+}
+
+.promo-container {
+
+	margin-bottom: 4rem;
+
+	.promo{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background: white;
+		justify-content: center;
+
+		.promo-text{
+			padding: 1.5rem;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: .5rem;
+
+			p.promo-tag{
+				text-transform: uppercase;
+				color: #DF6951;
+				font-family: HP Simplified Hans;
+				font-weight: 600;
+			}
+
+			> h2{
+				font-size: 32px;
+				font-weight: 700;
+				color: #0d0d55;
+			}
+
+			p.promo-description{
+				font-family: HP Simplified Hans;
+				margin-bottom: 1rem;
+				line-height: 20px;
+			}
+		}
+	}
+	
+}
+
+.features{
+
+	display: flex;
+	flex-direction: column-reverse;
+	margin-bottom: 4rem;
+
+	.features-container{
+		display: flex;
+		flex-direction: column;
+		padding: 2.5rem 1.5rem;
+
+		.tag{
+			font-family: HP Simplified;
+			font-weight: 600;
+			color: #DF6951;
+			margin-bottom: .5rem;
+		}
+
+		h2.features-title{
+			font-size: 1.8rem;
+			font-weight: 600;
+			margin-bottom: 1rem;
+		}
+
+		.features-cards{
+			display: flex;
+			flex-direction: column;
+			gap: 1.5rem;
+
+			.feature{
+				display: flex;
+				gap: 1.5rem;
+				align-items: center;
+				font-family: HP Simplified;
+
+				.feature-text{
+					p:nth-child(1){
+						color: #646980;
+						margin-bottom: .3rem;
+						font-weight: 600;
+					}
+				}
+			}
+		}
+	}
+	
+}
+
+
+.banner.info-banner{
+	position: relative;
+	margin-bottom: 5rem;
+
+	img{
+		max-width: unset;
+		width: 250%;
+		transform: translateX(-360px);
+	}
+
+	h2{
+		position: absolute;
+		top: 2rem;
+		left: 1.5rem;
+		font-size: 1.8rem;
+		width: 70%;
+		font-weight: 500;
+		color: white;
+		text-transform: capitalize;
+		line-height: 35px;
+		letter-spacing: 1px;
+		
+
+		// &::after{
+		// 	content: '';
+		// 	background: url("../assets/swirl.png");
+		// 	background-repeat: no-repeat;
+		// 	height: 50px;
+		// 	width: 100px;
+		// 	bottom:  -50px;
+		// 	right: 0;
+		// 	position: absolute;
+		// }
+	}
+}
+
+.explore-banners{
+	margin: 2rem 0;
+	margin-bottom: 4rem;
+}
+
+.banner:not(.banner.info-banner) {
+	position: relative;
+	// margin: 2rem 0;
+	isolation: isolate;
+	overflow: hidden;
+
+	&::after{
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background: rgba(0, 0, 0, 0.486);
+		top: -1px;
+		left: 0;
+		z-index: 1;
+	}
+
+	img{
+		position: relative;
+	}
+
+	.banner-text{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		align-items: center;
+		z-index: 22;
+		text-align: center;
+		color: white;
+		width: 100%;
+
+		p.tag{
+			font-size: 13px;
+			font-family: HP Simplified;
+			margin-bottom: .3rem;
+			letter-spacing: 3px;
+		}
+
+		h2{
+			font-size: 2rem;
+			margin-bottom: .7rem;
+		}
+	}
+}
+
+.toursPreview{
+	padding: 1rem 1.5rem;
+	
+	.toursPreview-header{
+		text-align: center;
+
+		.toursPreview-tag{
+			font-family: HP Simplified Hans;
+			font-weight: 600;
+			color: #DF6951;
+			margin-bottom: .5rem;
+		}
+
+		#toursPreview-title{
+			font-size: 2.3rem;
+			font-weight: 600;
+			color: #00002b;
+			text-transform: capitalize;
+			width: 50%;
+			min-width: 300px;
+			max-width: 400px;
+			margin: auto auto;
+			margin-bottom: 1.25rem;
+		}
+	}
+
+	.tours-container{
+		width: 250px;
+		overflow-x: hidden;
+		margin: 0 auto;
+
+	}
+
+	.tours {
+		display: flex;
+		flex-direction: row;
+		width: 750px;
+		align-items: flex-start;
+		font-family: HP Simplified;
+		transition: all 350ms ease-out;
+	}
+
+	.tour-info{
+		max-width: 250px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 0 auto;
+		font-size: 15px;
+
+		div.tour-info-img{
+			width: 249px;
+			height: 230px;
+			background: #646980;
+			border-radius: 10px;
+		}
+
+		.tour-info-stats{
+			display: flex;
+			gap: 1rem;
+			margin: 1rem 0; 
+			
+
+			> span{
+				display: flex;
+				align-items: center;
+				gap: .5rem;
+				color: #575b6e;
+
+				img{
+					width: 15px;
+				}
+			}
+		}
+
+
+		div.name-section{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		h4{
+			font-size: 1.5rem;
+			width: max-content;
+			font-weight: 600;
+			display: inline;
+			margin-right: 1rem;
+
+		}
+		span.rating{
+			display: inline;
+			align-self: flex-end;
+			margin-left: auto;
+		}
+		span.Europe, span.Brazil, span.Egypt{
+			display: block;
+			display: flex;
+			align-items: center;
+			gap: .5rem;
+			color: #575b6e;
+			margin: .6em 0;
+
+			img{
+				width: 20px;
+			}
+		}
+
+		div.price{
+			display: flex;
+			gap: 1rem;
+			align-items: baseline;
+			margin-bottom: .75em;
+
+			.current-price{
+				font-size: 1.5rem;
+				color: #DF6951;
+			}
+
+			.old-price{
+				text-decoration: line-through;
+				color: #646980;
+			}
+			
+		}
+
+		button{
+			align-self: flex-start;
+			margin-top: 1rem;
+		}
+
+
+	}
+
+	.tours-sliders{
+		width: 50px;
+		height: 10px;
+		margin: 2rem auto;
+		margin-bottom: 3rem;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		*{
+			width: 10px;
+			height: 10px;
+			background-color: #0d0d55;
+			border-radius: 50%;
+			cursor: pointer;
+			transition: all 300ms ease-out;
+		}
+
+		.active-slide{
+			transform: scale(1.4);
+			background: #DF6951;
+		}
+	}
+}
+
+.testimonial-section{
+	padding: 2.5rem 0;
+	background: #f3f3f3;
+	width: 100vw;
+	position: relative;
+
+	.testimonial-tag{
+		font-family: HP Simplified;
+		font-weight: 600;
+		color: #DF6951;
+		margin-bottom: .5rem;
+		text-align: center;
+	}
+
+	h2.testimonial-title{
+		font-size: 1.8rem;
+		font-weight: 600;
+		margin-bottom: 1rem;
+		text-align: center;
+		max-width: 400px;
+		margin: 0 auto 2rem auto;
+		color: #0d0d55;
+		width: 70%;
+		max-width: 500px;
+	}
+
+	.slide-control{
+		position: absolute;
+		width:80px;
+		top: 63%;
+		cursor: pointer;
+	}
+
+	.slide-control.right{
+		right: .5rem;
+		transform: rotate(180deg);	
+		top: 58%;
+	}	
+	.slide-control.left {
+		left: .5rem;
+	}
+
+	.testimonial-container{
+		overflow-x: hidden;
+	}
+
+	.testimonial-slider{
+		display: flex;
+		width: 300%;
+		align-items: center;
+		margin-top: 1rem;
+		transition: transform 300ms ease-in-out;
+
+		.testimonial-slider-slide{
+			width: 100%;
+			margin: auto;
+			max-width: 500px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			padding: 0rem 2.5rem;
+			text-align: center;
+			font-family: HP Simplified;
+
+
+			img{
+				width: 100px;
+				height: 100px;
+				object-fit: cover;
+				border-radius: 50%;
+				border: 7px solid white;
+				box-shadow: 6px 14px 22px -10px black;
+				margin-bottom: 20px;
+			}
+
+			.testimonial-slider-text{
+				font-size: 14px;
+				line-height: 1.5rem;
+				letter-spacing: .7px;
+				padding: 0 1.5rem;
+			}
+
+			.testimonial-slider-name {
+				font-weight: 600;
+				margin-top: 1rem;
+			}
+		}
+	}
+
+}
+
+.slide1{
+	transform: translateX(0);
+}
+.slide2{
+	transform: translateX(-33.3%);
+}
+.slide3{
+	transform: translateX(-66.6%);
+}
+
+

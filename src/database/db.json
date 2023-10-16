@@ -37,7 +37,7 @@
     "promos": {
         "honeymoon":{
         "promoClass": "romantic-trips",
-        "illustration": "",
+        "illustration": "../src/assets/romantic-tropical.png",
         "promoText": {
             "tag": "Honeymoon Specials",
             "title": "Our Romantic Tropical Destinations",
@@ -48,7 +48,7 @@
         "promoClass": "europe-tours",
         "illustration": "",
         "promoText": {
-            "tag": null,
+            "tag": "Promotion",
             "title": "We Provide You Best Europe Sightseeing Tours",
             "description": "Et labore harum non nobis ipsum eum molestias mollitia et corporis praesentium a laudantium internos. Non quis eius quo eligendi corrupti et fugiat nulla qui soluta recusandae in maxime quasi aut ducimus illum aut optio quibusdam!"
         }
@@ -63,15 +63,15 @@
             "text": "Vel officiis dolor ea illo aut eligendi ullam non laudantium magnam et recusandae molestiae sit iure unde aut voluptate quaerat. Id sunt provident quo possimus impedit vel doloremque obcaecati qui ullam consectetur et ipsum omnis."
         },
         {
-            "customerName": "Christine Beckham",
+            "customerName": "David Pecks",
             "img": "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=400&q=60",
-            "customerProfession": "Designer",
+            "customerProfession": "Developer",
             "text": "Vel officiis dolor ea illo aut eligendi ullam non laudantium magnam et recusandae molestiae sit iure unde aut voluptate quaerat. Id sunt provident quo possimus impedit vel doloremque obcaecati qui ullam consectetur et ipsum omnis."
         },
         {
-            "customerName": "Christine Beckham",
+            "customerName": "Solomon Grundy",
             "img": "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=400&q=60",
-            "customerProfession": "Designer",
+            "customerProfession": "MemeLord",
             "text": "Vel officiis dolor ea illo aut eligendi ullam non laudantium magnam et recusandae molestiae sit iure unde aut voluptate quaerat. Id sunt provident quo possimus impedit vel doloremque obcaecati qui ullam consectetur et ipsum omnis."
         }
     ]

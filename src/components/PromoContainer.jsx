@@ -1,10 +1,10 @@
 import React from 'react'
 import Promo from './Promo'
 
-function PromoContainer({ promoDetails }) {
+function PromoContainer({ promoDetails, isRomaticPromo }) {
   return (
     <div className='promo-container'>
-        <Promo {...promoDetails}/>
+        <Promo {...promoDetails} isRomanticPromo={isRomaticPromo}/>
     </div>
   )
 }

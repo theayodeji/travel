@@ -50,4 +50,616 @@ table {
 
 img {
   max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+nav .nav-link, nav > p {
+  font-family: "Circular Std";
+  font-size: 17px;
+  font-weight: 500;
+}
+
+button {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  background-color: #DF6951;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: Hp Simplified;
+  transition: all 250ms ease-in;
+}
+button:hover {
+  background-color: #e78470;
+}
+
+button.btn-transparent {
+  background: none;
+  border: 1px solid white;
+}
+button.btn-transparent:hover {
+  background-color: white;
+  color: rgba(0, 0, 0, 0);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  background: url("../assets/rectangle-19290.png");
+  background-size: cover;
+  background-position: -300px 0px;
+  background-repeat: no-repeat;
+}
+header * {
+  font-family: "HP Simplified Hans";
+}
+header .logo {
+  width: 100px;
+}
+header .burger {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+}
+header .burger * {
+  width: 30px;
+  height: 2px;
+  background-color: white;
+  border-radius: 5px;
+  transition: all 250ms ease-in-out;
+}
+header .burger *:not(:nth-child(2)) {
+  transition-delay: 150ms;
+}
+header .burger.active :nth-child(1) {
+  transform: rotate(45deg) translate(5px, 6px);
+}
+header .burger.active :nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -6px);
+}
+header .burger.active :nth-child(2) {
+  opacity: 0;
+}
+header .nav-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+}
+header .nav-wrapper .dropdown-link {
+  display: none;
+}
+header nav {
+  display: none;
+}
+header .hero.hero-promo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 3rem 1.5rem;
+}
+header .hero.hero-promo > h1 {
+  font-size: 42px;
+  margin: 1rem 0;
+  margin-bottom: 2rem;
+  color: white;
+  font-weight: 700;
+}
+header .hero.hero-promo .search-booking {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  background-color: rgba(255, 255, 255, 0.5137254902);
+  backdrop-filter: blur(10px);
+  padding: 1.5rem 1.5rem;
+  border-radius: 5px;
+  gap: 1.5rem;
+  width: 50%;
+}
+header .hero.hero-promo .search-booking > *:not(button) {
+  color: white;
+  font-size: 15px;
+}
+header .hero.hero-promo .search-booking input[type=text] {
+  border: none;
+  font-size: 0.9rem;
+  padding: 0;
+  width: 80px;
+  background: none;
+}
+header .hero.hero-promo .search-booking input[type=text]:active, header .hero.hero-promo .search-booking input[type=text]:focus, header .hero.hero-promo .search-booking input[type=text]:focus-visible {
+  border: none;
+  outline: none;
+}
+header .hero.hero-promo .search-booking input[type=text]:focus-visible::placeholder {
+  color: rgba(255, 255, 255, 0.4509803922);
+}
+header .hero.hero-promo .search-booking input[type=text]::placeholder {
+  color: white;
+  font-size: 15px;
+  padding: none;
+  margin: 0;
+}
+header .hero.hero-promo .search-booking .dropdown-link {
+  cursor: pointer;
+  position: relative;
+}
+header .hero.hero-promo .search-booking .dropdown-link span img {
+  width: 10px;
+  margin-left: 10px;
+  transform: translateY(-2px);
+  transition: all 250ms ease-in-out;
+}
+header .hero.hero-promo .search-booking .dropdown-link .dropdown-items {
+  position: absolute;
+  background: white;
+  color: #0a0a20;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1.5rem;
+  gap: 1rem;
+  border-radius: 5px;
+  box-shadow: 12px 9px 30px -10px rgba(0, 0, 0, 0.411);
+  top: 20px;
+  left: -20px;
+  transition: all 200ms ease-in;
+  z-index: 999;
+}
+header .hero.hero-promo .search-booking .dropdown-link .dropdown-items > * {
+  transition: color 200ms ease-in;
+}
+header .hero.hero-promo .search-booking .dropdown-link .dropdown-items > *:hover {
+  color: #DF6951;
+}
+header .hero.hero-promo .search-booking .dropdown-link span img.opened {
+  transform: rotateX(180deg) translateY(0);
+}
+
+.services {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 1.5rem;
+  align-items: center;
+  text-align: center;
+}
+.services > p {
+  font-size: 13px;
+  margin-bottom: 5px;
+  font-family: "HP Simplified Hans";
+  font-weight: 700;
+  color: #DF6951;
+  margin-bottom: 10px;
+}
+.services > h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 800;
+  color: #00002b;
+}
+.services .services-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+  isolation: isolate;
+}
+.services .services-container * {
+  font-family: "HP Simplified Hans";
+}
+.services .services-container img {
+  width: 80px;
+}
+.services .services-container > * {
+  width: 70%;
+  padding: 3rem 1rem;
+  border-radius: 30px;
+  box-shadow: -6px 7px 20px -12px rgba(0, 0, 0, 0.678);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  position: relative;
+  background: white;
+}
+.services .services-container > * h5 {
+  font-size: 1.2rem;
+  color: #0d0d55;
+}
+.services .services-container > *::before {
+  transition: all 300ms ease-in-out;
+  height: 70px;
+  width: 70px;
+  background: #DF6951;
+  content: "";
+  position: absolute;
+  border-radius: 20px;
+  z-index: -1;
+  opacity: 0;
+  bottom: -30px;
+  left: 30px;
+}
+.services .services-container > *:hover::before {
+  opacity: 1;
+  bottom: -30px;
+  left: -30px;
+}
+
+.promo-container {
+  margin-bottom: 4rem;
+}
+.promo-container .promo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  justify-content: center;
+}
+.promo-container .promo .promo-text {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.promo-container .promo .promo-text p.promo-tag {
+  text-transform: uppercase;
+  color: #DF6951;
+  font-family: HP Simplified Hans;
+  font-weight: 600;
+}
+.promo-container .promo .promo-text > h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #0d0d55;
+}
+.promo-container .promo .promo-text p.promo-description {
+  font-family: HP Simplified Hans;
+  margin-bottom: 1rem;
+  line-height: 20px;
+}
+
+.features {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-bottom: 4rem;
+}
+.features .features-container {
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem 1.5rem;
+}
+.features .features-container .tag {
+  font-family: HP Simplified;
+  font-weight: 600;
+  color: #DF6951;
+  margin-bottom: 0.5rem;
+}
+.features .features-container h2.features-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.features .features-container .features-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.features .features-container .features-cards .feature {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  font-family: HP Simplified;
+}
+.features .features-container .features-cards .feature .feature-text p:nth-child(1) {
+  color: #646980;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+}
+
+.banner.info-banner {
+  position: relative;
+  margin-bottom: 5rem;
+}
+.banner.info-banner img {
+  max-width: unset;
+  width: 250%;
+  transform: translateX(-360px);
+}
+.banner.info-banner h2 {
+  position: absolute;
+  top: 2rem;
+  left: 1.5rem;
+  font-size: 1.8rem;
+  width: 70%;
+  font-weight: 500;
+  color: white;
+  text-transform: capitalize;
+  line-height: 35px;
+  letter-spacing: 1px;
+}
+
+.explore-banners {
+  margin: 2rem 0;
+  margin-bottom: 4rem;
+}
+
+.banner:not(.banner.info-banner) {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+.banner:not(.banner.info-banner)::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.486);
+  top: -1px;
+  left: 0;
+  z-index: 1;
+}
+.banner:not(.banner.info-banner) img {
+  position: relative;
+}
+.banner:not(.banner.info-banner) .banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  align-items: center;
+  z-index: 22;
+  text-align: center;
+  color: white;
+  width: 100%;
+}
+.banner:not(.banner.info-banner) .banner-text p.tag {
+  font-size: 13px;
+  font-family: HP Simplified;
+  margin-bottom: 0.3rem;
+  letter-spacing: 3px;
+}
+.banner:not(.banner.info-banner) .banner-text h2 {
+  font-size: 2rem;
+  margin-bottom: 0.7rem;
+}
+
+.toursPreview {
+  padding: 1rem 1.5rem;
+}
+.toursPreview .toursPreview-header {
+  text-align: center;
+}
+.toursPreview .toursPreview-header .toursPreview-tag {
+  font-family: HP Simplified Hans;
+  font-weight: 600;
+  color: #DF6951;
+  margin-bottom: 0.5rem;
+}
+.toursPreview .toursPreview-header #toursPreview-title {
+  font-size: 2.3rem;
+  font-weight: 600;
+  color: #00002b;
+  text-transform: capitalize;
+  width: 50%;
+  min-width: 300px;
+  max-width: 400px;
+  margin: auto auto;
+  margin-bottom: 1.25rem;
+}
+.toursPreview .tours-container {
+  width: 250px;
+  overflow-x: hidden;
+  margin: 0 auto;
+}
+.toursPreview .tours {
+  display: flex;
+  flex-direction: row;
+  width: 750px;
+  align-items: flex-start;
+  font-family: HP Simplified;
+  transition: all 350ms ease-out;
+}
+.toursPreview .tour-info {
+  max-width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 auto;
+  font-size: 15px;
+}
+.toursPreview .tour-info div.tour-info-img {
+  width: 249px;
+  height: 230px;
+  background: #646980;
+  border-radius: 10px;
+}
+.toursPreview .tour-info .tour-info-stats {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+.toursPreview .tour-info .tour-info-stats > span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #575b6e;
+}
+.toursPreview .tour-info .tour-info-stats > span img {
+  width: 15px;
+}
+.toursPreview .tour-info div.name-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.toursPreview .tour-info h4 {
+  font-size: 1.5rem;
+  width: max-content;
+  font-weight: 600;
+  display: inline;
+  margin-right: 1rem;
+}
+.toursPreview .tour-info span.rating {
+  display: inline;
+  align-self: flex-end;
+  margin-left: auto;
+}
+.toursPreview .tour-info span.Europe, .toursPreview .tour-info span.Brazil, .toursPreview .tour-info span.Egypt {
+  display: block;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #575b6e;
+  margin: 0.6em 0;
+}
+.toursPreview .tour-info span.Europe img, .toursPreview .tour-info span.Brazil img, .toursPreview .tour-info span.Egypt img {
+  width: 20px;
+}
+.toursPreview .tour-info div.price {
+  display: flex;
+  gap: 1rem;
+  align-items: baseline;
+  margin-bottom: 0.75em;
+}
+.toursPreview .tour-info div.price .current-price {
+  font-size: 1.5rem;
+  color: #DF6951;
+}
+.toursPreview .tour-info div.price .old-price {
+  text-decoration: line-through;
+  color: #646980;
+}
+.toursPreview .tour-info button {
+  align-self: flex-start;
+  margin-top: 1rem;
+}
+.toursPreview .tours-sliders {
+  width: 50px;
+  height: 10px;
+  margin: 2rem auto;
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.toursPreview .tours-sliders * {
+  width: 10px;
+  height: 10px;
+  background-color: #0d0d55;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 300ms ease-out;
+}
+.toursPreview .tours-sliders .active-slide {
+  transform: scale(1.4);
+  background: #DF6951;
+}
+
+.testimonial-section {
+  padding: 2.5rem 0;
+  background: #f3f3f3;
+  width: 100vw;
+  position: relative;
+}
+.testimonial-section .testimonial-tag {
+  font-family: HP Simplified;
+  font-weight: 600;
+  color: #DF6951;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+.testimonial-section h2.testimonial-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-align: center;
+  max-width: 400px;
+  margin: 0 auto 2rem auto;
+  color: #0d0d55;
+  width: 70%;
+  max-width: 500px;
+}
+.testimonial-section .slide-control {
+  position: absolute;
+  width: 80px;
+  top: 63%;
+  cursor: pointer;
+}
+.testimonial-section .slide-control.right {
+  right: 0.5rem;
+  transform: rotate(180deg);
+  top: 58%;
+}
+.testimonial-section .slide-control.left {
+  left: 0.5rem;
+}
+.testimonial-section .testimonial-container {
+  overflow-x: hidden;
+}
+.testimonial-section .testimonial-slider {
+  display: flex;
+  width: 300%;
+  align-items: center;
+  margin-top: 1rem;
+  transition: transform 300ms ease-in-out;
+}
+.testimonial-section .testimonial-slider .testimonial-slider-slide {
+  width: 100%;
+  margin: auto;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0rem 2.5rem;
+  text-align: center;
+  font-family: HP Simplified;
+}
+.testimonial-section .testimonial-slider .testimonial-slider-slide img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 7px solid white;
+  box-shadow: 6px 14px 22px -10px black;
+  margin-bottom: 20px;
+}
+.testimonial-section .testimonial-slider .testimonial-slider-slide .testimonial-slider-text {
+  font-size: 14px;
+  line-height: 1.5rem;
+  letter-spacing: 0.7px;
+  padding: 0 1.5rem;
+}
+.testimonial-section .testimonial-slider .testimonial-slider-slide .testimonial-slider-name {
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.slide1 {
+  transform: translateX(0);
+}
+
+.slide2 {
+  transform: translateX(-33.3%);
+}
+
+.slide3 {
+  transform: translateX(-66.6%);
 }/*# sourceMappingURL=general.css.map */

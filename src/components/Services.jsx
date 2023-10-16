@@ -22,7 +22,7 @@ function Services() {
   return (
     <div className='services'>
         <p>CATEGORY</p>
-        <h2>We Offer Best Services</h2>
+        <h2>We Offer The Best Services</h2>
         <div className="services-container">
             {services.map((service, index)=>{
                 return (

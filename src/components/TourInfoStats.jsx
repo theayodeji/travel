@@ -1,6 +1,6 @@
 const TourInfoStats = ({icon, number, label}) => {
     return ( 
-        <span><img src={icon} alt="" /> {number && number + " "} {label}</span>
+        <span className={`stat-element ${label}`}><img src={icon} alt="" /> <span>{number && number + " "} {label}</span> </span>
      );
 }
  

@@ -1,6 +1,8 @@
-import React from 'react'
+import React from 'react';
 import Dropdown from './Dropdown';
-import Navlink from "./Navlink"
+import Navlink from "./Navlink";
+import Button from "./Button";
+
 
 function Navigation() {
     const links = [
@@ -24,8 +26,15 @@ function Navigation() {
         }
     })
 
+    function handleClick () {
+        return
+    }
+
   return (
-    navItems
+    <nav>
+         <Button label={"Sign In"} dataType={"primary"} handleClick={handleClick}/>
+           { navItems}
+    </nav>
   )
 }
 

@@ -1,20 +1,19 @@
 import React from 'react';
 import Logo from "./Logo";
 import Navigation from './Navigation';
-import Button from "./Button"
 import Hero from "./Hero"
+import Burger from './Burger';
 
 function Header() {
 
-    const handleClick = ()=> {
-        return
-    }
-
   return (
     <header>
+      
+        <div className="nav-wrapper">
         <Logo />
         <Navigation />
-        <Button label={"Sign In"} dataType={"primary"} handleClick={handleClick}/>
+        <Burger />
+        </div>
         <Hero isPromo={true}/>
     </header>
     )
