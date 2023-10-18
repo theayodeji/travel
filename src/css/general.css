@@ -376,6 +376,8 @@ header .hero.hero-promo .search-booking .dropdown-link span img.opened {
 .banner.info-banner {
   position: relative;
   margin-bottom: 5rem;
+  width: 100%;
+  overflow-x: hidden;
 }
 .banner.info-banner img {
   max-width: unset;
