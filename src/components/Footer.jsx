@@ -1,9 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Logo from './Logo'
 import SocialIcons from "./SocialIcons"
 import SubscriptionForm from './SubscriptionForm'
+import SubscriptonSuccessPopup from './SubscriptonSuccessPopup'
 
 function Footer() {
+
+  const [isSuccessPopupVisible, setIsSuccessPopupVisible] = useState(false);
+  const showSuccessPopup = () => {
+    setIsSuccessPopupVisible(true);
+  };
+
+  const hideSuccessPopup = () => {
+    setIsSuccessPopupVisible(false);
+  };
+
   return (
     <div className='footer'>
         <div className="footer-wrapper">
@@ -30,11 +41,12 @@ function Footer() {
                         <li className="navlist-item footer-navlist-item">Toronto</li>
                     </ul>
             </div>
-            <div className="footer-section subscription-form">
-                <SubscriptionForm />    
+            <div className="footer-section subscription">
+                <SubscriptionForm  showSuccessPopup={showSuccessPopup}/>    
             </div>
         </div>
         <div className="footer-copyright">Copyright @ Xpro 2022. All Rights Reserved.</div>
+        {isSuccessPopupVisible && <SubscriptonSuccessPopup hideSuccessPopup={hideSuccessPopup}/>}
     </div>
   )
 }

@@ -9,8 +9,6 @@ function Slide() {
     controls.forEach(control => {
       control.addEventListener('click', () => {
 
-        console.log('clicked')
-
         if (control.classList.contains('left')){
           if (currentSlide === 1){
             return

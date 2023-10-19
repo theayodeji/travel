@@ -1,0 +1,66 @@
+.subscription-success {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 100vh;
+  padding-top: 50%;
+}
+.subscription-success::after {
+  content: "";
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.397);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.subscription-success .success-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  width: 320px;
+  transform: translateY(-50%);
+}
+.subscription-success .success-container > img {
+  width: 150px;
+}
+.subscription-success .success-container .success-text {
+  font-family: HP Simplified;
+}
+.subscription-success .success-container .success-text h3 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #00002b;
+  margin-bottom: 0.5rem;
+}
+.subscription-success .success-container .success-text p {
+  line-height: 20px;
+}
+.subscription-success .success-container #close-button::before, .subscription-success .success-container #close-button::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 28px;
+  background-color: grey;
+  border-radius: 3px;
+  top: 0;
+  right: 0;
+}
+.subscription-success .success-container #close-button::before {
+  transform: translate(-15px, 25px) rotate(45deg);
+}
+.subscription-success .success-container #close-button::after {
+  transform: translate(-15px, 25px) rotate(-45deg);
+}/*# sourceMappingURL=successPopup.css.map */

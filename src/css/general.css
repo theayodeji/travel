@@ -83,7 +83,7 @@ button.btn-transparent {
 }
 button.btn-transparent:hover {
   background-color: white;
-  color: rgba(0, 0, 0, 0);
+  color: #0a0a20;
 }
 
 * {
@@ -664,4 +664,84 @@ header .hero.hero-promo .search-booking .dropdown-link span img.opened {
 
 .slide3 {
   transform: translateX(-66.6%);
+}
+
+.footer {
+  background-color: #fcfcfc;
+  text-align: center;
+  padding: 1rem 1.5rem;
+}
+.footer .footer-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4vh;
+  font-family: HP Simplified;
+  font-size: 14px;
+  margin-bottom: 1rem;
+}
+.footer .footer-wrapper h6 {
+  font-size: 16px;
+  color: #00002b;
+  font-weight: 600;
+}
+.footer .footer-wrapper .footer-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2vh;
+}
+.footer .footer-wrapper .footer-section.outro {
+  font-weight: 400;
+}
+.footer .footer-wrapper .footer-section.outro .social-icons {
+  align-items: baseline;
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+}
+.footer .footer-wrapper .footer-section.outro .social-icons * {
+  transition: fill 250ms ease-out;
+}
+.footer .footer-wrapper .footer-section.outro .social-icons svg:hover * {
+  fill: #00002b;
+  cursor: pointer;
+}
+.footer .footer-wrapper .footer-section.footer-nav ul, .footer .footer-wrapper .footer-section.footer-destinations ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-weight: 400;
+}
+.footer .footer-wrapper .footer-section.footer-nav ul *, .footer .footer-wrapper .footer-section.footer-destinations ul * {
+  cursor: pointer;
+}
+.footer .footer-wrapper .footer-section.subscription {
+  padding: 0 1.5rem;
+  margin-bottom: 2rem;
+}
+.footer .footer-wrapper .footer-section.subscription p#emailError {
+  transition: all 250ms ease-out;
+  margin-bottom: 2rem;
+}
+.footer .footer-wrapper .footer-section.subscription .subscription-form .form {
+  margin: 1.3rem auto;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  background: white;
+  box-shadow: 1px 3px 13px -8px black;
+  border-radius: 5px;
+}
+.footer .footer-wrapper .footer-section.subscription .subscription-form .form input {
+  border: none;
+  background-color: none;
+  width: 100%;
+  padding-left: 1rem;
+}
+.footer .footer-wrapper .footer-section.subscription .subscription-form .form input:focus-within, .footer .footer-wrapper .footer-section.subscription .subscription-form .form input:focus-visible, .footer .footer-wrapper .footer-section.subscription .subscription-form .form input:active, .footer .footer-wrapper .footer-section.subscription .subscription-form .form input:focus {
+  outline: none;
+}
+.footer .footer-wrapper .footer-section.subscription .subscription-form .form input::placeholder {
+  color: rgba(100, 105, 128, 0.4941176471);
 }/*# sourceMappingURL=general.css.map */

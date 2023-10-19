@@ -77,7 +77,7 @@ button.btn-transparent{
 
 	&:hover{
 		background-color: white;
-		color: #0000;
+		color: #0a0a20;
 	}
 }
 
@@ -788,4 +788,104 @@ header{
 	transform: translateX(-66.6%);
 }
 
+
+.footer {
+	background-color: #fcfcfc;
+	text-align: center;
+	padding: 1rem 1.5rem ;
+
+	.footer-wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		
+		gap: 4vh;
+		font-family: HP Simplified;
+		font-size: 14px;
+		margin-bottom: 1rem;
+
+		h6{
+			font-size: 16px;
+			color: #00002b;
+			font-weight: 600;
+		}
+
+		.footer-section {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 2vh;
+
+			&.outro{
+				font-weight: 400;
+				
+				.social-icons{
+					align-items: baseline;
+					display: flex;
+					justify-content: center;
+					gap: .6rem;
+
+					*{
+						transition: fill 250ms ease-out;
+					}
+
+					svg:hover  *{
+						fill: #00002b;
+						cursor: pointer;
+					}
+				}
+			}
+
+			&.footer-nav, &.footer-destinations {
+				ul{
+					display: flex;
+					flex-direction: column;
+					gap: .3rem;
+					font-weight: 400;
+					
+					*{
+						cursor: pointer;
+					}
+				}
+
+			}
+
+			&.subscription{
+				padding: 0 1.5rem;
+				margin-bottom: 2rem;
+
+				p#emailError{
+					transition: all 250ms ease-out;
+					margin-bottom: 2rem;
+				}
+
+				.subscription-form .form{
+					margin: 1.3rem auto;
+					margin-bottom: 1rem;
+					display: flex;
+					justify-content: flex-start;
+					background: white;
+					box-shadow: 1px 3px 13px -8px black;
+					border-radius: 5px;
+
+
+					input{
+						border: none;
+						background-color: none;
+						width: 100%;
+						padding-left: 1rem;
+
+						&:focus-within, &:focus-visible, &:active, &:focus{
+							outline: none;
+						}
+
+						&::placeholder{
+							color: #6469807e;
+						}
+					}
+				}
+			}
+		}
+	}
+}
 

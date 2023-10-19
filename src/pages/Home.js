@@ -1,4 +1,3 @@
-import React from 'react';
 import Header from "../components/Header";
 import Partners from "../components/Partners";
 import Services from "../components/Services"
@@ -15,6 +14,7 @@ import Footer from "../components/Footer";
 import "../css/Home.css";
 
 function Home() {
+
 
   const honeymoonPromo = data.promos.honeymoon;
   const europeanToursPromo = data.promos.europeanTours;
@@ -36,7 +36,7 @@ function Home() {
         </div>
         <ToursPreview />
         <Testimonials />
-        <Footer />
+        <Footer/>
     </div>
   )
 }

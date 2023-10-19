@@ -2,7 +2,7 @@ import React from "react";
 
 function SocialIcons() {
   return (
-    <div>
+    <div className="social-icons">
       <svg
         width="21"
         height="20"
