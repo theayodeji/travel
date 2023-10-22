@@ -4,7 +4,7 @@ import TourInfo from './TourInfo';
 import { useEffect } from 'react';
 
 function ToursPreview() {
-    const tours = data.Tours.map((tour, index) => {
+    const tours = data.Tours.slice(0,3).map((tour, index) => {
         return <TourInfo key={index} {...tour}/>
     });
 
@@ -12,6 +12,18 @@ function ToursPreview() {
      useEffect(() =>{
       const sliders = document.querySelector(".tours-sliders").childNodes;
       const toursCarousel = document.querySelector('.tours');
+
+      window.addEventListener("resize", () =>{
+        sliders.forEach((slider, i) =>{
+          if (i !== 0){
+          slider.classList.remove('active-slide')
+        }else{
+          slider.classList.add('active-slide');
+        }});
+
+        toursCarousel.style.transform = 'translateX(0)';
+
+      })
 
       sliders.forEach(slider =>{
         slider.addEventListener("click", ()=> {

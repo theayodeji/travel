@@ -9,7 +9,8 @@
             "price": 1000,
             "isDiscounted": true,
             "oldPrice": 1200,
-            "description": "Nam exercitationem commodi et ducimus quia in dolore animi sit mollitia amet id quod eligendi. Et labore harum non nobis ipsum eum molestias mollitia et corporis praesentium a laudantium internos."
+            "description": "Nam exercitationem commodi et ducimus quia in dolore animi sit mollitia amet id quod eligendi. Et labore harum non nobis ipsum eum molestias mollitia et corporis praesentium a laudantium internos.",
+            "tags": ["business", "tours", "musical"]
         },
         {
             "tourName": "Amazon",
@@ -20,7 +21,8 @@
             "price": 1223,
             "isDiscounted": true,
             "oldPrice": 1200,
-            "description": "Nam exercitationem commodi et ducimus quia in dolore animi sit mollitia amet id quod eligendi. Et labore harum non nobis ipsum eum molestias mollitia et corporis praesentium a laudantium internos."
+            "description": "Nam exercitationem commodi et ducimus quia in dolore animi sit mollitia amet id quod eligendi. Et labore harum non nobis ipsum eum molestias mollitia et corporis praesentium a laudantium internos.",
+            "tags": ["tours", "honeymoon"]
         },
         {
             "tourName": "Giza",
@@ -30,8 +32,66 @@
             "numberOfPeople": 155,
             "price": 1200,
             "isDiscounted": false,
-            "description": "Nam exercitationem commodi et ducimus quia in dolore animi sit mollitia amet id quod eligendi. Et labore harum non nobis ipsum eum molestias mollitia et corporis praesentium a laudantium internos."
+            "description": "Nam exercitationem commodi et ducimus quia in dolore animi sit mollitia amet id quod eligendi. Et labore harum non nobis ipsum eum molestias mollitia et corporis praesentium a laudantium internos.",
+            "tags": ["tours", "business", "holiday", "religous"]
+        },
+        {
+            "tourName": "Barcelona",
+            "location": "Spain",
+            "rating": 4,
+            "duration": 15,
+            "numberOfPeople": 155,
+            "price": 1200,
+            "isDiscounted": false,
+            "description": "Nam exercitationem commodi et ducimus quia in dolore animi sit mollitia amet id quod eligendi. Et labore harum non nobis ipsum eum molestias mollitia et corporis praesentium a laudantium internos.",
+            "tags": ["holiday", "tours", "honeymoon"]
+        },
+        {
+            "tourName": "Tomorrow Land",
+            "location": "New York",
+            "rating": 4,
+            "duration": 15,
+            "numberOfPeople": 155,
+            "price": 2200,
+            "isDiscounted": false,
+            "description": "Nam exercitationem commodi et ducimus quia in dolore animi sit mollitia amet id quod eligendi. Et labore harum non nobis ipsum eum molestias mollitia et corporis praesentium a laudantium internos.",
+            "tags": ["business", "tours", "musical"]
+        },
+        {
+            "tourName": "Tomorrow Land",
+            "location": "New York",
+            "rating": 5,
+            "duration": 15,
+            "numberOfPeople": 35,
+            "price": 1200,
+            "isDiscounted": false,
+            "description": "Nam exercitationem commodi et ducimus quia in dolore animi sit mollitia amet id quod eligendi. Et labore harum non nobis ipsum eum molestias mollitia et corporis praesentium a laudantium internos.",
+            "tags": ["business", "tours", "musical"]
+        },
+        {
+            "tourName": "Vishwakumar",
+            "location": "India",
+            "rating": 5,
+            "duration": 15,
+            "numberOfPeople": 35,
+            "price": 1200,
+            "isDiscounted": false,
+            "description": "Nam exercitationem commodi et ducimus quia in dolore animi sit mollitia amet id quod eligendi. Et labore harum non nobis ipsum eum molestias mollitia et corporis praesentium a laudantium internos.",
+            "tags": ["business", "tours", "musical", "honeymoon", "religous"]
+        },
+        {
+            "tourName": "Tranquil",
+            "location": "Ibiza",
+            "rating": 5,
+            "duration": 30,
+            "numberOfPeople": 300,
+            "oldPrice": 3500,
+            "price": 3200,
+            "isDiscounted": true,
+            "description": "Nam exercitationem commodi et ducimus quia in dolore animi sit mollitia amet id quod eligendi. Et labore harum non nobis ipsum eum molestias mollitia et corporis praesentium a laudantium internos.",
+            "tags": ["holiday", "tours", "honeymoon"]
         }
+
     ],
 
     "promos": {
@@ -63,14 +123,14 @@
             "text": "Vel officiis dolor ea illo aut eligendi ullam non laudantium magnam et recusandae molestiae sit iure unde aut voluptate quaerat. Id sunt provident quo possimus impedit vel doloremque obcaecati qui ullam consectetur et ipsum omnis."
         },
         {
-            "customerName": "David Pecks",
-            "img": "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=400&q=60",
+            "customerName": "Rebecca Shoe",
+            "img": "https://images.unsplash.com/photo-1627161683077-e34782c24d81?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aGVhZHNob3R8ZW58MHx8MHx8fDA%3D",
             "customerProfession": "Developer",
             "text": "Vel officiis dolor ea illo aut eligendi ullam non laudantium magnam et recusandae molestiae sit iure unde aut voluptate quaerat. Id sunt provident quo possimus impedit vel doloremque obcaecati qui ullam consectetur et ipsum omnis."
         },
         {
             "customerName": "Solomon Grundy",
-            "img": "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=400&q=60",
+            "img": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aGVhZHNob3R8ZW58MHx8MHx8fDA%3D",
             "customerProfession": "MemeLord",
             "text": "Vel officiis dolor ea illo aut eligendi ullam non laudantium magnam et recusandae molestiae sit iure unde aut voluptate quaerat. Id sunt provident quo possimus impedit vel doloremque obcaecati qui ullam consectetur et ipsum omnis."
         }

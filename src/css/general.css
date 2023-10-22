@@ -1,16 +1,84 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -20,8 +88,17 @@ time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
 }
 
@@ -29,16 +106,20 @@ body {
   line-height: 1;
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
   content: "";
   content: none;
 }
@@ -57,8 +138,9 @@ a {
   color: unset;
 }
 
-nav .nav-link, nav > p {
-  font-family: "Circular Std";
+nav .nav-link,
+nav > p {
+  font-family: HP Simplified;
   font-size: 17px;
   font-weight: 500;
 }
@@ -66,7 +148,7 @@ nav .nav-link, nav > p {
 button {
   padding: 0.8rem 1.5rem;
   border: none;
-  background-color: #DF6951;
+  background-color: #df6951;
   color: white;
   border-radius: 5px;
   cursor: pointer;
@@ -90,9 +172,12 @@ button.btn-transparent:hover {
   box-sizing: border-box;
 }
 
-body {
+body,
+html {
   width: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
+  height: max-content;
+  overflow-y: scroll;
 }
 
 header {
@@ -101,112 +186,36 @@ header {
   flex-direction: column;
   background: url("../assets/rectangle-19290.png");
   background-size: cover;
-  background-position: -300px 0px;
   background-repeat: no-repeat;
 }
 header * {
   font-family: "HP Simplified Hans";
 }
-header .logo {
-  width: 100px;
-}
-header .burger {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  cursor: pointer;
-}
-header .burger * {
-  width: 30px;
-  height: 2px;
-  background-color: white;
-  border-radius: 5px;
-  transition: all 250ms ease-in-out;
-}
-header .burger *:not(:nth-child(2)) {
-  transition-delay: 150ms;
-}
-header .burger.active :nth-child(1) {
-  transform: rotate(45deg) translate(5px, 6px);
-}
-header .burger.active :nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -6px);
-}
-header .burger.active :nth-child(2) {
-  opacity: 0;
-}
 header .nav-wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 1.5rem;
 }
-header .nav-wrapper .dropdown-link {
-  display: none;
+header .logo {
+  width: 100px;
 }
 header nav {
-  display: none;
-}
-header .hero.hero-promo {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 3rem 1.5rem;
+  align-self: center;
+  justify-content: space-between;
 }
-header .hero.hero-promo > h1 {
-  font-size: 42px;
-  margin: 1rem 0;
-  margin-bottom: 2rem;
-  color: white;
-  font-weight: 700;
-}
-header .hero.hero-promo .search-booking {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: 20px;
-  background-color: rgba(255, 255, 255, 0.5137254902);
-  backdrop-filter: blur(10px);
-  padding: 1.5rem 1.5rem;
-  border-radius: 5px;
-  gap: 1.5rem;
-  width: 50%;
-}
-header .hero.hero-promo .search-booking > *:not(button) {
-  color: white;
-  font-size: 15px;
-}
-header .hero.hero-promo .search-booking input[type=text] {
-  border: none;
-  font-size: 0.9rem;
-  padding: 0;
-  width: 80px;
-  background: none;
-}
-header .hero.hero-promo .search-booking input[type=text]:active, header .hero.hero-promo .search-booking input[type=text]:focus, header .hero.hero-promo .search-booking input[type=text]:focus-visible {
-  border: none;
-  outline: none;
-}
-header .hero.hero-promo .search-booking input[type=text]:focus-visible::placeholder {
-  color: rgba(255, 255, 255, 0.4509803922);
-}
-header .hero.hero-promo .search-booking input[type=text]::placeholder {
-  color: white;
-  font-size: 15px;
-  padding: none;
-  margin: 0;
-}
-header .hero.hero-promo .search-booking .dropdown-link {
+
+.dropdown-link {
   cursor: pointer;
   position: relative;
 }
-header .hero.hero-promo .search-booking .dropdown-link span img {
+.dropdown-link span img {
   width: 10px;
   margin-left: 10px;
   transform: translateY(-2px);
   transition: all 250ms ease-in-out;
 }
-header .hero.hero-promo .search-booking .dropdown-link .dropdown-items {
+.dropdown-link .dropdown-items {
   position: absolute;
   background: white;
   color: #0a0a20;
@@ -220,43 +229,76 @@ header .hero.hero-promo .search-booking .dropdown-link .dropdown-items {
   left: -20px;
   transition: all 200ms ease-in;
   z-index: 999;
+  width: max-content;
 }
-header .hero.hero-promo .search-booking .dropdown-link .dropdown-items > * {
+.dropdown-link .dropdown-items > * {
   transition: color 200ms ease-in;
 }
-header .hero.hero-promo .search-booking .dropdown-link .dropdown-items > *:hover {
-  color: #DF6951;
+.dropdown-link .dropdown-items > *:hover {
+  color: #df6951;
 }
-header .hero.hero-promo .search-booking .dropdown-link span img.opened {
+.dropdown-link span img.opened {
   transform: rotateX(180deg) translateY(0);
+}
+
+.hero.hero-promo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.hero.hero-promo > h1 {
+  color: white;
+  font-weight: 700;
+}
+.hero.hero-promo .search-booking {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: rgba(255, 255, 255, 0.5137254902);
+  backdrop-filter: blur(10px);
+  border-radius: 5px;
+}
+.hero.hero-promo .search-booking > *:not(button) {
+  color: white;
+}
+.hero.hero-promo .search-booking input[type=text] {
+  border: none;
+  font-size: 0.9rem;
+  padding: 0;
+  width: 80px;
+  background: none;
+}
+.hero.hero-promo .search-booking input[type=text]:active, .hero.hero-promo .search-booking input[type=text]:focus, .hero.hero-promo .search-booking input[type=text]:focus-visible {
+  border: none;
+  outline: none;
+}
+.hero.hero-promo .search-booking input[type=text]:focus-visible::placeholder {
+  color: rgba(255, 255, 255, 0.4509803922);
+}
+.hero.hero-promo .search-booking input[type=text]::placeholder {
+  color: white;
+  font-size: 15px;
+  padding: none;
+  margin: 0;
 }
 
 .services {
   display: flex;
   flex-direction: column;
-  padding: 3rem 1.5rem;
   align-items: center;
   text-align: center;
 }
 .services > p {
-  font-size: 13px;
-  margin-bottom: 5px;
   font-family: "HP Simplified Hans";
   font-weight: 700;
-  color: #DF6951;
-  margin-bottom: 10px;
+  color: #df6951;
 }
 .services > h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
   font-weight: 800;
   color: #00002b;
 }
 .services .services-container {
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 2rem;
   position: relative;
   isolation: isolate;
 }
@@ -269,24 +311,31 @@ header .hero.hero-promo .search-booking .dropdown-link span img.opened {
 .services .services-container > * {
   width: 70%;
   padding: 3rem 1rem;
-  border-radius: 30px;
-  box-shadow: -6px 7px 20px -12px rgba(0, 0, 0, 0.678);
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1em;
   position: relative;
   background: white;
+  border-radius: 30px;
 }
 .services .services-container > * h5 {
-  font-size: 1.2rem;
   color: #0d0d55;
+}
+.services .services-container > *:hover {
+  box-shadow: -6px 7px 20px -12px rgba(0, 0, 0, 0.678);
+  cursor: zoom-in;
+}
+.services .services-container > *:hover::before {
+  opacity: 1;
+  bottom: -30px;
+  left: -30px;
 }
 .services .services-container > *::before {
   transition: all 300ms ease-in-out;
   height: 70px;
   width: 70px;
-  background: #DF6951;
+  background: #df6951;
   content: "";
   position: absolute;
   border-radius: 20px;
@@ -295,111 +344,85 @@ header .hero.hero-promo .search-booking .dropdown-link span img.opened {
   bottom: -30px;
   left: 30px;
 }
-.services .services-container > *:hover::before {
-  opacity: 1;
-  bottom: -30px;
-  left: -30px;
-}
 
-.promo-container {
-  margin-bottom: 4rem;
-}
 .promo-container .promo {
   display: flex;
-  flex-direction: column;
   align-items: center;
   background: white;
   justify-content: center;
 }
-.promo-container .promo .promo-text {
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-}
-.promo-container .promo .promo-text p.promo-tag {
+.promo-container .promo p.promo-tag {
   text-transform: uppercase;
-  color: #DF6951;
+  color: #df6951;
   font-family: HP Simplified Hans;
   font-weight: 600;
 }
-.promo-container .promo .promo-text > h2 {
+.promo-container .promo h2 {
   font-size: 32px;
   font-weight: 700;
-  color: #0d0d55;
+  color: #00002b;
+}
+.promo-container .promo .promo-text {
+  display: flex;
+  flex-direction: column;
 }
 .promo-container .promo .promo-text p.promo-description {
   font-family: HP Simplified Hans;
-  margin-bottom: 1rem;
   line-height: 20px;
 }
 
 .features {
   display: flex;
-  flex-direction: column-reverse;
-  margin-bottom: 4rem;
 }
 .features .features-container {
-  display: flex;
-  flex-direction: column;
   padding: 2.5rem 1.5rem;
 }
 .features .features-container .tag {
-  font-family: HP Simplified;
-  font-weight: 600;
-  color: #DF6951;
   margin-bottom: 0.5rem;
 }
 .features .features-container h2.features-title {
   font-size: 1.8rem;
-  font-weight: 600;
   margin-bottom: 1rem;
+}
+.features .features-container .features-cards {
+  gap: 1.5rem;
+}
+.features .features-container .features-cards .feature {
+  gap: 1.5rem;
+}
+.features .features-container .features-cards .feature .feature-text p:nth-child(1) {
+  margin-bottom: 0.3rem;
+}
+.features .features-container {
+  display: flex;
+  flex-direction: column;
+}
+.features .features-container .tag {
+  font-family: HP Simplified;
+  font-weight: 600;
+  color: #df6951;
+}
+.features .features-container h2.features-title {
+  font-weight: 600;
 }
 .features .features-container .features-cards {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
 }
 .features .features-container .features-cards .feature {
   display: flex;
-  gap: 1.5rem;
   align-items: center;
   font-family: HP Simplified;
 }
 .features .features-container .features-cards .feature .feature-text p:nth-child(1) {
   color: #646980;
-  margin-bottom: 0.3rem;
   font-weight: 600;
 }
 
 .banner.info-banner {
   position: relative;
-  margin-bottom: 5rem;
   width: 100%;
   overflow-x: hidden;
-}
-.banner.info-banner img {
-  max-width: unset;
-  width: 250%;
-  transform: translateX(-360px);
-}
-.banner.info-banner h2 {
-  position: absolute;
-  top: 2rem;
-  left: 1.5rem;
-  font-size: 1.8rem;
-  width: 70%;
-  font-weight: 500;
-  color: white;
-  text-transform: capitalize;
-  line-height: 35px;
-  letter-spacing: 1px;
-}
-
-.explore-banners {
-  margin: 2rem 0;
-  margin-bottom: 4rem;
 }
 
 .banner:not(.banner.info-banner) {
@@ -418,7 +441,7 @@ header .hero.hero-promo .search-booking .dropdown-link span img.opened {
   z-index: 1;
 }
 .banner:not(.banner.info-banner) img {
-  position: relative;
+  max-width: 100%;
 }
 .banner:not(.banner.info-banner) .banner-text {
   position: absolute;
@@ -432,48 +455,26 @@ header .hero.hero-promo .search-booking .dropdown-link span img.opened {
   width: 100%;
 }
 .banner:not(.banner.info-banner) .banner-text p.tag {
-  font-size: 13px;
   font-family: HP Simplified;
-  margin-bottom: 0.3rem;
   letter-spacing: 3px;
 }
-.banner:not(.banner.info-banner) .banner-text h2 {
-  font-size: 2rem;
-  margin-bottom: 0.7rem;
-}
 
-.toursPreview {
-  padding: 1rem 1.5rem;
-}
-.toursPreview .toursPreview-header {
-  text-align: center;
-}
-.toursPreview .toursPreview-header .toursPreview-tag {
+.toursPreview .toursPreview-tag {
   font-family: HP Simplified Hans;
   font-weight: 600;
-  color: #DF6951;
-  margin-bottom: 0.5rem;
+  color: #df6951;
+  text-align: center;
 }
-.toursPreview .toursPreview-header #toursPreview-title {
-  font-size: 2.3rem;
+.toursPreview #toursPreview-title {
   font-weight: 600;
   color: #00002b;
   text-transform: capitalize;
-  width: 50%;
-  min-width: 300px;
-  max-width: 400px;
   margin: auto auto;
-  margin-bottom: 1.25rem;
-}
-.toursPreview .tours-container {
-  width: 250px;
-  overflow-x: hidden;
-  margin: 0 auto;
+  text-align: center;
 }
 .toursPreview .tours {
   display: flex;
   flex-direction: row;
-  width: 750px;
   align-items: flex-start;
   font-family: HP Simplified;
   transition: all 350ms ease-out;
@@ -482,9 +483,8 @@ header .hero.hero-promo .search-booking .dropdown-link span img.opened {
   max-width: 250px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 0 auto;
-  font-size: 15px;
+  height: 100%;
+  justify-content: space-between;
 }
 .toursPreview .tour-info div.tour-info-img {
   width: 249px;
@@ -509,10 +509,9 @@ header .hero.hero-promo .search-booking .dropdown-link span img.opened {
 .toursPreview .tour-info div.name-section {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 .toursPreview .tour-info h4 {
-  font-size: 1.5rem;
   width: max-content;
   font-weight: 600;
   display: inline;
@@ -523,7 +522,9 @@ header .hero.hero-promo .search-booking .dropdown-link span img.opened {
   align-self: flex-end;
   margin-left: auto;
 }
-.toursPreview .tour-info span.Europe, .toursPreview .tour-info span.Brazil, .toursPreview .tour-info span.Egypt {
+.toursPreview .tour-info span.Europe,
+.toursPreview .tour-info span.Brazil,
+.toursPreview .tour-info span.Egypt {
   display: block;
   display: flex;
   align-items: center;
@@ -531,7 +532,9 @@ header .hero.hero-promo .search-booking .dropdown-link span img.opened {
   color: #575b6e;
   margin: 0.6em 0;
 }
-.toursPreview .tour-info span.Europe img, .toursPreview .tour-info span.Brazil img, .toursPreview .tour-info span.Egypt img {
+.toursPreview .tour-info span.Europe img,
+.toursPreview .tour-info span.Brazil img,
+.toursPreview .tour-info span.Egypt img {
   width: 20px;
 }
 .toursPreview .tour-info div.price {
@@ -542,7 +545,7 @@ header .hero.hero-promo .search-booking .dropdown-link span img.opened {
 }
 .toursPreview .tour-info div.price .current-price {
   font-size: 1.5rem;
-  color: #DF6951;
+  color: #df6951;
 }
 .toursPreview .tour-info div.price .old-price {
   text-decoration: line-through;
@@ -552,91 +555,41 @@ header .hero.hero-promo .search-booking .dropdown-link span img.opened {
   align-self: flex-start;
   margin-top: 1rem;
 }
-.toursPreview .tours-sliders {
-  width: 50px;
-  height: 10px;
-  margin: 2rem auto;
-  margin-bottom: 3rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.toursPreview .tours-sliders * {
-  width: 10px;
-  height: 10px;
-  background-color: #0d0d55;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: all 300ms ease-out;
-}
-.toursPreview .tours-sliders .active-slide {
-  transform: scale(1.4);
-  background: #DF6951;
-}
 
 .testimonial-section {
-  padding: 2.5rem 0;
-  background: #f3f3f3;
   width: 100vw;
   position: relative;
 }
 .testimonial-section .testimonial-tag {
   font-family: HP Simplified;
   font-weight: 600;
-  color: #DF6951;
-  margin-bottom: 0.5rem;
+  color: #df6951;
   text-align: center;
 }
 .testimonial-section h2.testimonial-title {
-  font-size: 1.8rem;
   font-weight: 600;
-  margin-bottom: 1rem;
   text-align: center;
-  max-width: 400px;
-  margin: 0 auto 2rem auto;
   color: #0d0d55;
-  width: 70%;
-  max-width: 500px;
-}
-.testimonial-section .slide-control {
-  position: absolute;
-  width: 80px;
-  top: 63%;
-  cursor: pointer;
-}
-.testimonial-section .slide-control.right {
-  right: 0.5rem;
-  transform: rotate(180deg);
-  top: 58%;
-}
-.testimonial-section .slide-control.left {
-  left: 0.5rem;
 }
 .testimonial-section .testimonial-container {
   overflow-x: hidden;
 }
 .testimonial-section .testimonial-slider {
   display: flex;
-  width: 300%;
   align-items: center;
-  margin-top: 1rem;
   transition: transform 300ms ease-in-out;
 }
 .testimonial-section .testimonial-slider .testimonial-slider-slide {
   width: 100%;
   margin: auto;
-  max-width: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0rem 2.5rem;
   text-align: center;
   font-family: HP Simplified;
 }
 .testimonial-section .testimonial-slider .testimonial-slider-slide img {
-  width: 100px;
-  height: 100px;
   object-fit: cover;
   border-radius: 50%;
   border: 7px solid white;
@@ -644,28 +597,567 @@ header .hero.hero-promo .search-booking .dropdown-link span img.opened {
   margin-bottom: 20px;
 }
 .testimonial-section .testimonial-slider .testimonial-slider-slide .testimonial-slider-text {
-  font-size: 14px;
   line-height: 1.5rem;
   letter-spacing: 0.7px;
-  padding: 0 1.5rem;
 }
 .testimonial-section .testimonial-slider .testimonial-slider-slide .testimonial-slider-name {
   font-weight: 600;
   margin-top: 1rem;
 }
-
-.slide1 {
+.testimonial-section .slide1 {
   transform: translateX(0);
 }
-
-.slide2 {
+.testimonial-section .slide2 {
   transform: translateX(-33.3%);
 }
-
-.slide3 {
+.testimonial-section .slide3 {
   transform: translateX(-66.6%);
 }
 
+@media only screen and (max-width: 770px) {
+  header {
+    background-position: -300px 0px;
+  }
+  header .burger {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    z-index: 5;
+  }
+  header .burger * {
+    width: 30px;
+    height: 2px;
+    background-color: white;
+    border-radius: 5px;
+    transition: all 250ms ease-in-out;
+  }
+  header .burger *:not(:nth-child(2)) {
+    transition-delay: 150ms;
+  }
+  header .burger.active {
+    z-index: 3;
+  }
+  header .burger.active * {
+    background-color: #0d0d55;
+  }
+  header .burger.active :nth-child(1) {
+    transform: rotate(45deg) translate(5px, 6px);
+  }
+  header .burger.active :nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -6px);
+  }
+  header .burger.active :nth-child(2) {
+    opacity: 0;
+  }
+  header .nav-wrapper {
+    position: relative;
+    padding: 0 1.5rem;
+    width: 100%;
+  }
+  header nav {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.651);
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    align-items: flex-start;
+    justify-content: flex-start;
+    z-index: 1;
+    gap: 1rem;
+    padding: 5rem 0 0 3rem;
+    transform: translateX(100%);
+    border-bottom-left-radius: 0;
+    transition: transform 250ms ease-in, backdrop-filter 350ms ease-in 200ms;
+    backdrop-filter: blur(0px);
+  }
+  header nav.active {
+    transform: translateX(0);
+    display: flex;
+    backdrop-filter: blur(6px);
+  }
+  header nav .dropdown-link span img.opened {
+    transform: rotateX(180deg) translateY(0);
+  }
+  header .hero.hero-promo {
+    padding: 3rem 1.5rem;
+  }
+  header .hero.hero-promo > h1 {
+    font-size: 42px;
+    margin: 1rem 0;
+    margin-bottom: 2rem;
+    color: white;
+  }
+  header .hero.hero-promo .search-booking {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    background-color: rgba(255, 255, 255, 0.5137254902);
+    backdrop-filter: blur(10px);
+    padding: 1.5rem 1.5rem;
+    border-radius: 5px;
+    gap: 1.5rem;
+    width: 50%;
+  }
+  header .hero.hero-promo .search-booking > *:not(button) {
+    font-size: 15px;
+  }
+  header .hero.hero-promo .search-booking .dropdown-link {
+    cursor: pointer;
+    position: relative;
+  }
+  header .hero.hero-promo .search-booking .dropdown-link .dropdown-items {
+    padding: 1rem 1.5rem;
+    gap: 1rem;
+  }
+  .services {
+    padding: 3rem 1.5rem;
+  }
+  .services > p {
+    font-size: 13px;
+    margin-bottom: 5px;
+    margin-bottom: 10px;
+  }
+  .services > h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .services .services-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .services .services-container * {
+    font-family: "HP Simplified Hans";
+  }
+  .services .services-container img {
+    width: 80px;
+  }
+  .services .services-container > * h5 {
+    font-size: 1.2rem;
+  }
+  .promo-container {
+    margin-bottom: 4rem;
+  }
+  .promo-container .promo {
+    flex-direction: column;
+  }
+  .promo-container .promo .promo-text {
+    padding: 1.5rem;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  .promo-container .promo .promo-text p.promo-description {
+    margin-bottom: 1rem;
+  }
+  .features {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 4rem;
+  }
+  .banner.info-banner {
+    margin-bottom: 5rem;
+    width: 100%;
+  }
+  .banner.info-banner img {
+    max-width: unset;
+    width: 250%;
+    transform: translateX(-360px);
+  }
+  .banner.info-banner h2 {
+    position: absolute;
+    top: 2rem;
+    left: 1.5rem;
+    font-size: 1.8rem;
+    width: 70%;
+    font-weight: 500;
+    color: white;
+    text-transform: capitalize;
+    line-height: 35px;
+    letter-spacing: 1px;
+  }
+  .explore-banners {
+    margin: 2rem 0;
+    margin-bottom: 4rem;
+  }
+  .banner:not(.banner.info-banner) img {
+    position: relative;
+  }
+  .banner:not(.banner.info-banner) .banner-text p.tag {
+    font-size: 13px;
+    margin-bottom: 0.3rem;
+  }
+  .banner:not(.banner.info-banner) .banner-text h2 {
+    font-size: 2rem;
+    margin-bottom: 0.7rem;
+  }
+  .testimonial-section {
+    padding: 2.5rem 0;
+    background: #f3f3f3;
+    width: 100vw;
+    position: relative;
+  }
+  .testimonial-section .testimonial-tag {
+    margin-bottom: 0.5rem;
+  }
+  .testimonial-section h2.testimonial-title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    max-width: 400px;
+    margin: 0 auto 2rem auto;
+    width: 70%;
+    max-width: 500px;
+  }
+  .testimonial-section .slide-control {
+    position: absolute;
+    width: 80px;
+    top: 63%;
+    cursor: pointer;
+  }
+  .testimonial-section .slide-control.right {
+    right: 0.5rem;
+    transform: rotate(180deg);
+    top: 58%;
+  }
+  .testimonial-section .slide-control.left {
+    left: 0.5rem;
+  }
+  .testimonial-section .testimonial-slider {
+    width: 300%;
+    margin-top: 1rem;
+  }
+  .testimonial-section .testimonial-slider .testimonial-slider-slide {
+    max-width: 500px;
+    padding: 0rem 2.5rem;
+  }
+  .testimonial-section .testimonial-slider .testimonial-slider-slide img {
+    width: 100px;
+    height: 100px;
+  }
+  .testimonial-section .testimonial-slider .testimonial-slider-slide .testimonial-slider-text {
+    font-size: 14px;
+    padding: 0 1.5rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .toursPreview {
+    padding: 1rem 1.5rem;
+  }
+  .toursPreview .toursPreview-header {
+    text-align: center;
+  }
+  .toursPreview .toursPreview-header .toursPreview-tag {
+    margin-bottom: 0.5rem;
+  }
+  .toursPreview .toursPreview-header #toursPreview-title {
+    font-size: 2.3rem;
+    margin-bottom: 1.25rem;
+    width: 50%;
+    min-width: 300px;
+    max-width: 400px;
+  }
+  .toursPreview .tours-container {
+    width: 250px;
+    overflow-x: hidden;
+    margin: 0 auto;
+  }
+  .toursPreview .tours {
+    width: 750px;
+    align-items: center;
+  }
+  .toursPreview .tour-info {
+    font-size: 15px;
+    width: 250px;
+  }
+  .toursPreview .tour-info h4 {
+    font-size: 1.5rem;
+  }
+  .toursPreview .tours-sliders {
+    width: 50px;
+    height: 10px;
+    margin: 2rem auto;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .toursPreview .tours-sliders * {
+    width: 10px;
+    height: 10px;
+    background-color: #0d0d55;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 300ms ease-out;
+  }
+  .toursPreview .tours-sliders .active-slide {
+    transform: scale(1.4);
+    background: #df6951;
+  }
+}
+@media only screen and (min-width: 770px) {
+  header {
+    position: relative;
+    padding: 1em 8em;
+  }
+}
+@media only screen and (min-width: 770px) and (max-width: 970px) {
+  header {
+    padding: 1em 3em;
+  }
+}
+@media only screen and (min-width: 770px) {
+  header .logo {
+    width: 100px;
+  }
+  header nav {
+    align-items: center;
+    justify-content: space-between;
+    width: 68%;
+    gap: 1.4em;
+    color: #fcfcfc;
+  }
+  header nav button {
+    margin-left: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  header .burger {
+    display: none;
+  }
+  header .hero.hero-promo {
+    margin-top: 4.5rem;
+    padding-bottom: 8rem;
+  }
+  header .hero.hero-promo h1 {
+    font-size: 3.5rem;
+    width: 45%;
+    line-height: 60px;
+  }
+  header .hero.hero-promo::after {
+    content: "";
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    background: url("../assets/Scroll.png");
+    bottom: -25%;
+    left: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  header .hero.hero-promo .search-booking {
+    padding: 15px 20px;
+    gap: 50px;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+  header .hero.hero-promo .search-booking button {
+    margin-left: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  header .hero.hero-promo .search-booking > *:nth-child(2) {
+    border-left: 2px solid #ffffff;
+    border-right: 2px solid #ffffff;
+    padding: 0.5rem 25px;
+  }
+  .services {
+    margin: 3rem 0;
+  }
+  .services p {
+    font-size: 16px;
+  }
+  .services h2 {
+    font-size: 40px;
+    margin-top: 1rem;
+  }
+  .services .services-container {
+    display: grid;
+    grid-template: "one two three four";
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    margin-top: 2rem;
+  }
+  .services .services-container .service {
+    width: 200px;
+  }
+}
+@media only screen and (min-width: 770px) and (max-width: 945px) {
+  .services .services-container {
+    grid-template: "one two";
+  }
+}
+@media only screen and (min-width: 770px) {
+  .promo-container {
+    padding: 0 8rem;
+    margin-bottom: 5rem;
+  }
+  .promo-container .promo {
+    gap: 6%;
+  }
+  .promo-container .promo img {
+    max-width: 600px;
+    margin-left: -45px;
+    min-width: 500px;
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 770px) and (max-width: 865px) {
+  .promo-container .promo img {
+    min-width: 400px;
+  }
+}
+@media only screen and (min-width: 770px) {
+  .promo-container .promo .promo-text {
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  .promo-container .promo .promo-text p.promo-tag {
+    margin-bottom: -0.5rem;
+  }
+  .promo-container .promo .promo-text h2 {
+    font-size: 40px;
+  }
+  .promo-container .promo .promo-text p.promo-description {
+    max-width: 500px;
+    min-width: 350px;
+  }
+  .features {
+    padding: 2em 8em;
+  }
+}
+@media only screen and (min-width: 770px) and (max-width: 1024px) {
+  .features {
+    padding: 2em 4em;
+    padding-right: 0;
+  }
+}
+@media only screen and (min-width: 770px) {
+  .features > img {
+    width: 50%;
+    object-fit: cover;
+  }
+  .features .features-container {
+    align-items: flex-start;
+    justify-content: center;
+    width: 50%;
+  }
+  .features .features-container .feature {
+    max-width: 400px;
+  }
+  .explore-banners {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 4rem;
+    margin-top: 6rem;
+  }
+  .explore-banners .banner-text p.tag {
+    font-size: 14px;
+  }
+  .explore-banners .banner-text h2 {
+    font-size: 2.8rem;
+    margin-bottom: 5%;
+  }
+}
+@media only screen and (min-width: 770px) and (max-width: 1024px) {
+  .explore-banners .banner-text h2 {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+  }
+}
+@media only screen and (min-width: 770px) {
+  .toursPreview {
+    align-items: center;
+    margin-bottom: 5rem;
+  }
+  .toursPreview .toursPreview-header {
+    margin-bottom: 2rem;
+  }
+  .toursPreview .toursPreview-header h2 {
+    font-size: 36px;
+    width: 50%;
+  }
+  .toursPreview .tours-container {
+    display: flex;
+    align-items: center;
+  }
+}
+@media only screen and (min-width: 770px) and (min-width: 1024px) {
+  .toursPreview .tours-container {
+    justify-content: center;
+    width: 100%;
+  }
+  .toursPreview .tours-container .tours {
+    width: 839px;
+    gap: 6%;
+  }
+  .toursPreview .tours-container .tours .tour-info {
+    width: 280px;
+  }
+  .toursPreview .tours-container .tours .tour-info .tour-info-img {
+    width: 280px;
+  }
+}
+@media only screen and (min-width: 770px) {
+  .toursPreview .tours-container .tours {
+    justify-content: center;
+  }
+  .toursPreview .tours-container .tours .tour-info {
+    max-width: unset;
+  }
+  .testimonial-section {
+    padding: 3.3rem 8rem;
+    padding-bottom: 2rem;
+    background: url("../assets/testimonials-bg.png") no-repeat;
+    background-size: cover;
+    background-position: top;
+  }
+  .testimonial-section .testimonial-tag {
+    margin-top: 3rem;
+  }
+  .testimonial-section .testimonial-title {
+    font-size: 3rem;
+    width: 50%;
+    min-width: 500px;
+    margin: auto;
+    margin-bottom: 1rem;
+  }
+  .testimonial-section .slide-control {
+    position: absolute;
+    top: 55%;
+  }
+  .testimonial-section .slide-control.left {
+    left: 26%;
+  }
+  .testimonial-section .testimonial-container {
+    width: 600px;
+    height: 400px;
+    margin: auto;
+    overflow-x: hidden;
+    overflow-y: visible;
+    padding-top: 3rem;
+    border-radius: 20px;
+    position: relative;
+  }
+  .testimonial-section .testimonial-container .testimonial-slider {
+    width: 300%;
+  }
+  .testimonial-section .testimonial-container .testimonial-slider .testimonial-slider-slide {
+    padding: 2.5rem 4.5rem;
+    border-radius: 20px;
+    background: #ffffff;
+  }
+  .testimonial-section .testimonial-container .testimonial-slider .testimonial-slider-slide img {
+    margin-bottom: 2rem;
+    margin-top: -80px;
+    z-index: 999;
+  }
+}
 .footer {
   background-color: #fcfcfc;
   text-align: center;

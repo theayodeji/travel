@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import data from "../database/db.json"
 import Slide from "../utilities/tesimonialSlider";
+import slidernav from "../assets/testim-navigation.svg"
+
 
 const testimonials = data.testimonials;
 
@@ -17,8 +19,6 @@ const slides = testimonials.map((slide, index) => {
 });
 
 function TestimonialSlider() {
-
-  
 
   useEffect(() => {
     

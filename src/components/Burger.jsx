@@ -3,6 +3,7 @@ import React from 'react'
 function Burger() {
 
     const openNav = () => {
+        document.querySelector('nav').classList.toggle('active');
         document.querySelector('.burger').classList.toggle('active');
     }
 

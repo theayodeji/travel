@@ -2,6 +2,7 @@ import React from 'react';
 import Dropdown from './Dropdown';
 import Navlink from "./Navlink";
 import Button from "./Button";
+import arrowIcon from "../assets/dropdown-arrow.png"
 
 
 function Navigation() {
@@ -19,7 +20,7 @@ function Navigation() {
 
     const navItems = links.map((item, index) => {
         if (item.isDropDown) {
-            return <Dropdown key={index} label={item.label} dropDownItems={item.dropDownItems}/>
+            return <Dropdown key={index} label={item.label} dropDownItems={item.dropDownItems} arrowIcon={arrowIcon}/>
         }
         else{
             return <Navlink key={index} label={item.label} url={item.url}/>
@@ -32,8 +33,8 @@ function Navigation() {
 
   return (
     <nav>
-         <Button label={"Sign In"} dataType={"primary"} handleClick={handleClick}/>
-           { navItems}
+        { navItems}
+         <Button label={"Sign In"} dataType={"primary"} handleClick={handleClick}/>   
     </nav>
   )
 }

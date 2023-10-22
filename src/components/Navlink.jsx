@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-function Navlink({link, label}) {
+function Navlink({url, label}) {
   return (
-    <Link to={link} className='nav-link'>
+    <Link to={url}  className='nav-link'>
         {label}
     </Link>
   )

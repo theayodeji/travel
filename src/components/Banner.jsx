@@ -16,7 +16,7 @@ function Banner({isInfoBanner, imgBackground, bannerText}) {
             <div className='banner'>
                 <img src={imgBackground} alt="" />
                 <div className="banner-text">
-                    <p className="tag">PPROMOTION</p>
+                    <p className="tag">PROMOTION</p>
                     <h2>{bannerText.title}</h2>
                     <Button label={"View Packages"} dataType={"transparent"}/>
                 </div>
