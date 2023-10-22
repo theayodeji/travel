@@ -1,4 +1,7 @@
 // CSS RESETS
+
+@import url(https://db.onlinewebfonts.com/c/6cb78fb592f9a8244397b1bd220d6453?family=HP+Simplified);
+
 html,
 body,
 div,
@@ -140,7 +143,7 @@ a {
 }
 
 nav .nav-link,
-nav > p {
+nav>p {
   font-family: HP Simplified;
   font-size: 17px;
   font-weight: 500;
@@ -175,8 +178,7 @@ button.btn-transparent {
   box-sizing: border-box;
 }
 
-body,
-html {
+body {
   width: 100%;
   overflow: hidden;
   height: max-content;
@@ -214,52 +216,52 @@ header {
 }
 
 .dropdown-link {
-	cursor: pointer;
-	position: relative;
+  cursor: pointer;
+  position: relative;
 
-	span img {
-	  width: 10px;
-	  margin-left: 10px;
-	  transform: translateY(-2px);
-	  transition: all 250ms ease-in-out;
-	}
-
-	.dropdown-items {
-	  position: absolute;
-	  background: white;
-	  color: #0a0a20;
-	  display: flex;
-	  flex-direction: column;
-	  padding: 1rem 1.5rem;
-	  gap: 1rem;
-	  border-radius: 5px;
-	  box-shadow: 12px 9px 30px -10px rgba(0, 0, 0, 0.411);
-	  top: 20px;
-	  left: -20px;
-	  transition: all 200ms ease-in;
-	  z-index: 999;
-	  width: max-content;
-
-	  & > * {
-		transition: color 200ms ease-in;
-	  }
-
-	  & > *:hover {
-		color: #df6951;
-	  }
-	}
-
-	& span img.opened {
-	  transform: rotateX(180deg) translateY(0);
-	}
+  span img {
+    width: 10px;
+    margin-left: 10px;
+    transform: translateY(-2px);
+    transition: all 250ms ease-in-out;
   }
+
+  .dropdown-items {
+    position: absolute;
+    background: white;
+    color: #0a0a20;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1.5rem;
+    gap: 1rem;
+    border-radius: 5px;
+    box-shadow: 12px 9px 30px -10px rgba(0, 0, 0, 0.411);
+    top: 20px;
+    left: -20px;
+    transition: all 200ms ease-in;
+    z-index: 999;
+    width: max-content;
+
+    &>* {
+      transition: color 200ms ease-in;
+    }
+
+    &>*:hover {
+      color: #df6951;
+    }
+  }
+
+  & span img.opened {
+    transform: rotateX(180deg) translateY(0);
+  }
+}
 
 .hero.hero-promo {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 
-  > h1 {
+  >h1 {
     color: white;
     font-weight: 700;
   }
@@ -272,7 +274,7 @@ header {
     backdrop-filter: blur(10px);
     border-radius: 5px;
 
-    > *:not(button) {
+    >*:not(button) {
       color: white;
     }
 
@@ -302,7 +304,7 @@ header {
       margin: 0;
     }
 
-    
+
   }
 }
 
@@ -312,13 +314,13 @@ header {
   align-items: center;
   text-align: center;
 
-  > p {
+  >p {
     font-family: "HP Simplified Hans";
     font-weight: 700;
     color: #df6951;
   }
 
-  > h2 {
+  >h2 {
     font-weight: 800;
     color: #00002b;
   }
@@ -336,7 +338,7 @@ header {
       width: 80px;
     }
 
-    > * {
+    >* {
       width: 70%;
       padding: 3rem 1rem;
       display: flex;
@@ -351,7 +353,7 @@ header {
         color: #0d0d55;
       }
 
-      &:hover{
+      &:hover {
         box-shadow: -6px 7px 20px -12px rgba(0, 0, 0, 0.678);
         cursor: zoom-in;
       }
@@ -562,7 +564,7 @@ header {
       gap: 1rem;
       margin: 1rem 0;
 
-      > span {
+      >span {
         display: flex;
         align-items: center;
         gap: 0.5rem;
@@ -649,6 +651,11 @@ header {
     color: #0d0d55;
   }
 
+  .slide-control {
+    cursor: pointer;
+
+  }
+
   .testimonial-container {
     overflow-x: hidden;
   }
@@ -674,6 +681,8 @@ header {
         border: 7px solid white;
         box-shadow: 6px 14px 22px -10px black;
         margin-bottom: 20px;
+        height: 100px;
+        width: 100px;
       }
 
       .testimonial-slider-text {
@@ -701,8 +710,110 @@ header {
   }
 }
 
-//HEADER
+.footer {
+  background-color: #fcfcfc;
+  text-align: center;
+  padding: 1rem 1.5rem;
 
+  .footer-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 4vh;
+    font-family: HP Simplified;
+    font-size: 14px;
+    margin-bottom: 1rem;
+
+    h6 {
+      font-size: 16px;
+      color: #00002b;
+      font-weight: 600;
+    }
+
+    .footer-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2vh;
+
+      &.outro {
+        font-weight: 400;
+
+        .social-icons {
+          align-items: baseline;
+          display: flex;
+          justify-content: center;
+          gap: 0.6rem;
+
+          * {
+            transition: fill 250ms ease-out;
+          }
+
+          svg:hover * {
+            fill: #00002b;
+            cursor: pointer;
+          }
+        }
+      }
+
+      &.footer-nav,
+      &.footer-destinations {
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 0.3rem;
+          font-weight: 400;
+
+          * {
+            cursor: pointer;
+          }
+        }
+      }
+
+      &.subscription {
+        padding: 0 1.5rem;
+        margin-bottom: 2rem;
+
+        p#emailError {
+          transition: all 250ms ease-out;
+          margin-bottom: 2rem;
+        }
+
+        .subscription-form .form {
+          margin: 1.3rem auto;
+          margin-bottom: 1rem;
+          display: flex;
+          justify-content: flex-start;
+          background: white;
+          box-shadow: 1px 3px 13px -8px black;
+          border-radius: 5px;
+
+          input {
+            border: none;
+            background-color: none;
+            width: 100%;
+            padding-left: 1rem;
+
+            &:focus-within,
+            &:focus-visible,
+            &:active,
+            &:focus {
+              outline: none;
+            }
+
+            &::placeholder {
+              color: #6469807e;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+//Mobile
 @media only screen and (max-width: 770px) {
   header {
     background-position: -300px 0px;
@@ -788,7 +899,7 @@ header {
     .hero.hero-promo {
       padding: 3rem 1.5rem;
 
-      > h1 {
+      >h1 {
         font-size: 42px;
         margin: 1rem 0;
         margin-bottom: 2rem;
@@ -807,7 +918,7 @@ header {
         gap: 1.5rem;
         width: 50%;
 
-        > *:not(button) {
+        >*:not(button) {
           font-size: 15px;
         }
 
@@ -827,13 +938,13 @@ header {
   .services {
     padding: 3rem 1.5rem;
 
-    > p {
+    >p {
       font-size: 13px;
       margin-bottom: 5px;
       margin-bottom: 10px;
     }
 
-    > h2 {
+    >h2 {
       font-size: 1.5rem;
       margin-bottom: 1.5rem;
     }
@@ -851,7 +962,7 @@ header {
         width: 80px;
       }
 
-      > * {
+      >* {
         h5 {
           font-size: 1.2rem;
         }
@@ -955,7 +1066,6 @@ header {
       position: absolute;
       width: 80px;
       top: 63%;
-      cursor: pointer;
     }
 
     .slide-control.right {
@@ -990,6 +1100,7 @@ header {
   }
 }
 
+//Tablet
 @media screen and (max-width:1024px) {
 
   .toursPreview {
@@ -1055,97 +1166,98 @@ header {
       }
     }
   }
-  
 }
 
+//Desktop
 @media only screen and (min-width: 770px) {
 
-	header{
+  header {
     position: relative;
-		
-		padding: 1em 8em ;
 
-    @media only screen and (max-width: 970px){
+    padding: 1em 8em;
+
+    @media only screen and (max-width: 970px) {
       padding: 1em 3em;
     }
 
-		.logo{
-			width: 100px;
-		}
-		
-		nav{
-			align-items: center;
-			justify-content: space-between;
-			width: 68%;
-			gap: 1.4em;
-			color: #fcfcfc;
+    .logo {
+      width: 100px;
+    }
 
-			button{
-				margin-left: auto;
-				padding-left: 1.5rem;
-				padding-right: 1.5rem;
-			}
-		}
+    nav {
+      align-items: center;
+      justify-content: space-between;
+      width: 68%;
+      gap: 1.4em;
+      color: #fcfcfc;
 
-		.burger{
-			display: none;
-		}
+      button {
+        margin-left: auto;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+      }
+    }
 
-		.hero.hero-promo{
-			margin-top: 4.5rem;
-			padding-bottom: 8rem;
-			h1{
-				font-size: 3.5rem;
-				width: 45%;
-				line-height: 60px;
-			}
+    .burger {
+      display: none;
+    }
 
-			&::after{
-				content: '';
-				height: 300px;
-				width: 300px;
-				position: absolute;
-				background: url("../assets/Scroll.png");
-				bottom: -25%;
-				left: 0;
-				background-size: cover;
-				background-repeat: no-repeat;
-			}
+    .hero.hero-promo {
+      margin-top: 4.5rem;
+      padding-bottom: 8rem;
 
-			.search-booking{
-				padding: 15px 20px;
-				gap: 50px;
-				margin-top: 2.5rem;
-				margin-bottom: 2.5rem;
+      h1 {
+        font-size: 3.5rem;
+        width: 45%;
+        line-height: 60px;
+      }
 
-				button{
-					margin-left: auto;
-					padding-left: 2rem;
-					padding-right: 2rem;
-				}
+      &::after {
+        content: '';
+        height: 300px;
+        width: 300px;
+        position: absolute;
+        background: url("../assets/Scroll.png");
+        bottom: -25%;
+        left: 0;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
 
-				&>*:nth-child(2){
-					border-left:  2px solid #ffffff;
-					border-right:  2px solid #ffffff;
-					padding: .5rem 25px;
-				}
-			}
-		}
-	}
+      .search-booking {
+        padding: 15px 20px;
+        gap: 50px;
+        margin-top: 2.5rem;
+        margin-bottom: 2.5rem;
 
-  .services{
+        button {
+          margin-left: auto;
+          padding-left: 2rem;
+          padding-right: 2rem;
+        }
+
+        &>*:nth-child(2) {
+          border-left: 2px solid #ffffff;
+          border-right: 2px solid #ffffff;
+          padding: .5rem 25px;
+        }
+      }
+    }
+  }
+
+  .services {
     margin: 3rem 0;
 
-    p{
+    p {
       font-size: 16px;
     }
 
-    h2{
+    h2 {
       font-size: 40px;
       margin-top: 1rem;
     }
 
-    .services-container{
+    .services-container {
       display: grid;
       grid-template: "one two three four";
       margin: auto;
@@ -1153,26 +1265,27 @@ header {
       align-items: center;
       gap: 5%;
       margin-top: 2rem;
-      .service{
+
+      .service {
         width: 200px;
       }
 
       @media only screen and (max-width: 945px) {
 
         grid-template: "one two";
-        
+
       }
     }
   }
 
-  .promo-container{
+  .promo-container {
     padding: 0 8rem;
     margin-bottom: 5rem;
 
-    .promo{
+    .promo {
       gap: 6%;
-      
-      img{
+
+      img {
         max-width: 600px;
         margin-left: -45px;
         min-width: 500px;
@@ -1183,19 +1296,19 @@ header {
         }
       }
 
-      .promo-text{
+      .promo-text {
         gap: 1rem;
         align-items: flex-start;
 
-        p.promo-tag{
+        p.promo-tag {
           margin-bottom: -.5rem;
         }
 
-        h2{
+        h2 {
           font-size: 40px;
         }
 
-        p.promo-description{
+        p.promo-description {
           max-width: 500px;
           min-width: 350px;
         }
@@ -1203,7 +1316,7 @@ header {
     }
   }
 
-  .features{
+  .features {
     padding: 2em 8em;
 
     @media only screen and (max-width:1024px) {
@@ -1211,38 +1324,40 @@ header {
       padding-right: 0;
     }
 
-    > img{
+    >img {
       width: 50%;
       object-fit: cover;
     }
-    .features-container{
+
+    .features-container {
       align-items: flex-start;
       justify-content: center;
       width: 50%;
 
-      .feature{
+      .feature {
         max-width: 400px;
       }
-      
+
 
     }
   }
 
-  .explore-banners{
+  .explore-banners {
     display: flex;
     flex-direction: row;
     margin-bottom: 4rem;
     margin-top: 6rem;
 
-    .banner-text{
-      p.tag{
+    .banner-text {
+      p.tag {
         font-size: 14px;
       }
-      h2{
+
+      h2 {
         font-size: 2.8rem;
         margin-bottom: 5%;
 
-        @media only screen  and (max-width:1024px){
+        @media only screen and (max-width:1024px) {
           font-size: 2rem;
           margin-bottom: .8rem;
         }
@@ -1250,63 +1365,64 @@ header {
     }
   }
 
-  .toursPreview{
+  .toursPreview {
     align-items: center;
     margin-bottom: 5rem;
 
-    .toursPreview-header{
+    .toursPreview-header {
       margin-bottom: 2rem;
 
-      h2{
+      h2 {
         font-size: 36px;
         width: 50%;
       }
     }
-    .tours-container{
+
+    .tours-container {
       display: flex;
       align-items: center;
-      
-      @media only screen and (min-width:1024px){
+
+      @media only screen and (min-width:1024px) {
         justify-content: center;
         width: 100%;
 
-        .tours{
+        .tours {
           width: 839px;
           gap: 6%;
 
-          .tour-info{
+          .tour-info {
             width: 280px;
 
-            .tour-info-img{
+            .tour-info-img {
               width: 280px;
             }
           }
         }
       }
 
-      .tours{
-        
+      .tours {
+
         justify-content: center;
 
-        .tour-info{
+        .tour-info {
           max-width: unset;
         }
       }
     }
   }
 
-  .testimonial-section{
+  .testimonial-section {
     padding: 3.3rem 8rem;
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
     background: url("../assets/testimonials-bg.png") no-repeat;
     background-size: cover;
     background-position: top;
 
-    .testimonial-tag{
+    .testimonial-tag {
       margin-top: 3rem;
     }
 
-    .testimonial-title{
+    .testimonial-title {
       font-size: 3rem;
       width: 50%;
       min-width: 500px;
@@ -1314,18 +1430,26 @@ header {
       margin-bottom: 1rem;
     }
 
-    .slide-control{
+    .slide-control {
       position: absolute;
-      top: 55%;
 
-      &.left{
-        left: 26%;
+      height: 80px;
+
+      &.left {
+        top: 40%;
+        left: 0;
+      }
+
+      &.right {
+        right: 0;
+        top: 33%;
+        transform: rotate(180deg);
       }
     }
 
-    .testimonial-container{
+    .testimonial-container {
       width: 600px;
-      height: 400px;
+      height: 350px;
       margin: auto;
       overflow-x: hidden;
       overflow-y: visible;
@@ -1333,15 +1457,15 @@ header {
       border-radius: 20px;
       position: relative;
 
-      .testimonial-slider{
+      .testimonial-slider {
         width: 300%;
 
-        .testimonial-slider-slide{
+        .testimonial-slider-slide {
           padding: 2.5rem 4.5rem;
           border-radius: 20px;
           background: #ffffff;
 
-          img{
+          img {
             margin-bottom: 2rem;
             margin-top: -80px;
             z-index: 999;
@@ -1350,107 +1474,37 @@ header {
       }
     }
   }
-	
-}
 
-.footer {
-  background-color: #fcfcfc;
-  text-align: center;
-  padding: 1rem 1.5rem;
+  .footer {
+    .footer-wrapper {
+      flex-direction: row;
+      margin: auto;
+      justify-content: space-between;
+      padding: 3rem 8rem;
+      padding-bottom: 1rem;
+      align-items: flex-start;
+      border-bottom: #bdbdbd 2px solid;
 
-  .footer-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    gap: 4vh;
-    font-family: HP Simplified;
-    font-size: 14px;
-    margin-bottom: 1rem;
-
-    h6 {
-      font-size: 16px;
-      color: #00002b;
-      font-weight: 600;
-    }
-
-    .footer-section {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 2vh;
-
-      &.outro {
-        font-weight: 400;
-
-        .social-icons {
-          align-items: baseline;
-          display: flex;
-          justify-content: center;
-          gap: 0.6rem;
-
-          * {
-            transition: fill 250ms ease-out;
-          }
-
-          svg:hover * {
-            fill: #00002b;
-            cursor: pointer;
-          }
-        }
+      .logo {
+        margin-top: -1rem;
       }
 
-      &.footer-nav,
-      &.footer-destinations {
-        ul {
-          display: flex;
-          flex-direction: column;
-          gap: 0.3rem;
-          font-weight: 400;
-
-          * {
-            cursor: pointer;
-          }
-        }
+      .footer-section {
+        align-items: flex-start;
+        text-align: left;
       }
 
-      &.subscription {
-        padding: 0 1.5rem;
-        margin-bottom: 2rem;
+      @media only screen and (max-width:1024px) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
-        p#emailError {
-          transition: all 250ms ease-out;
-          margin-bottom: 2rem;
-        }
-
-        .subscription-form .form {
-          margin: 1.3rem auto;
-          margin-bottom: 1rem;
-          display: flex;
-          justify-content: flex-start;
-          background: white;
-          box-shadow: 1px 3px 13px -8px black;
-          border-radius: 5px;
-
-          input {
-            border: none;
-            background-color: none;
-            width: 100%;
-            padding-left: 1rem;
-
-            &:focus-within,
-            &:focus-visible,
-            &:active,
-            &:focus {
-              outline: none;
-            }
-
-            &::placeholder {
-              color: #6469807e;
-            }
-          }
+        .footer-section {
+          align-items: center;
+          text-align: center;
         }
       }
     }
   }
+
 }
